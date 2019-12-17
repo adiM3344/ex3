@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/Lexer.cpp.o"
+  "CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
   "CMakeFiles/ex3.dir/ex1.cpp.o"
   "CMakeFiles/ex3.dir/main.cpp.o"
   "ex3"

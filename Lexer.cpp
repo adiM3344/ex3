@@ -10,6 +10,8 @@ using namespace std;
 string* Lexer::lexer(string file_name) {
     ifstream file(file_name, ios::in);
     queue<string> strings;
+
+
     while (file) {
         string line;
         getline(file, line);
