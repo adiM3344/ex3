@@ -90,6 +90,12 @@
 		<Unit filename="/home/adi/CLionProjects/ex3/Lexer.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/ex1.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/ex1.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/adi/CLionProjects/ex3/main.cpp">
 			<Option target="ex3"/>
 		</Unit>
