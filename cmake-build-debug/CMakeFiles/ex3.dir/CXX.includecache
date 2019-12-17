@@ -11,12 +11,26 @@ iostream
 -
 Lexer.h
 /home/adi/CLionProjects/ex3/Lexer.h
-fstream
--
 queue
 -
 
 /home/adi/CLionProjects/ex3/Lexer.h
 fstream
+-
+
+/home/adi/CLionProjects/ex3/ex1.cpp
+ex1.h
+/home/adi/CLionProjects/ex3/ex1.h
+Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
+
+/home/adi/CLionProjects/ex3/ex1.h
+Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
+string
+-
+stack
+-
+map
 -
 

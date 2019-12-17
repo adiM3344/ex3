@@ -4,6 +4,9 @@
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Lexer.cpp
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Lexer.h
 
+CMakeFiles/ex3.dir/ex1.cpp.o: ../ex1.cpp
+CMakeFiles/ex3.dir/ex1.cpp.o: ../ex1.h
+
 CMakeFiles/ex3.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../main.cpp
 
