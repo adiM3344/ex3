@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adi/CLionProjects/ex3/Lexer.cpp
+iostream
+-
+Lexer.h
+/home/adi/CLionProjects/ex3/Lexer.h
+fstream
+-
+queue
+-
+
+/home/adi/CLionProjects/ex3/Lexer.h
+fstream
+-
+
