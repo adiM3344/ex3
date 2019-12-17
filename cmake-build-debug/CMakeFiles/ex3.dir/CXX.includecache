@@ -6,17 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/adi/CLionProjects/ex3/Lexer.cpp
+/home/ortal/CLionProjects/ex3/Expression.h
+
+/home/ortal/CLionProjects/ex3/Lexer.cpp
 iostream
 -
 Lexer.h
-/home/adi/CLionProjects/ex3/Lexer.h
-fstream
--
+/home/ortal/CLionProjects/ex3/Lexer.h
 queue
 -
 
-/home/adi/CLionProjects/ex3/Lexer.h
+/home/ortal/CLionProjects/ex3/Lexer.h
 fstream
 -
+
+/home/ortal/CLionProjects/ex3/OpenServerCommand.cpp
+OpenServerCommand.h
+/home/ortal/CLionProjects/ex3/OpenServerCommand.h
+
+/home/ortal/CLionProjects/ex3/OpenServerCommand.h
+
+/home/ortal/CLionProjects/ex3/ex1.cpp
+ex1.h
+/home/ortal/CLionProjects/ex3/ex1.h
+Expression.h
+/home/ortal/CLionProjects/ex3/Expression.h
+
+/home/ortal/CLionProjects/ex3/ex1.h
+Expression.h
+/home/ortal/CLionProjects/ex3/Expression.h
+string
+-
+stack
+-
+map
+-
+
+/home/ortal/CLionProjects/ex3/main.cpp
+iostream
+-
+fstream
+-
+Lexer.h
+/home/ortal/CLionProjects/ex3/Lexer.h
 
