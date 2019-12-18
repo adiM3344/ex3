@@ -87,6 +87,18 @@
 		<Unit filename="/home/ortal/CLionProjects/ex3/Command.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConnectCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConnectCommand.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/ortal/CLionProjects/ex3/DefineVarCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/ortal/CLionProjects/ex3/DefineVarCommand.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/ortal/CLionProjects/ex3/Lexer.cpp">
 			<Option target="ex3"/>
 		</Unit>

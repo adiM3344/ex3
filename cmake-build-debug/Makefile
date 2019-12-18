@@ -123,6 +123,60 @@ ex3/fast:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/build
 .PHONY : ex3/fast
 
+ConnectCommand.o: ConnectCommand.cpp.o
+
+.PHONY : ConnectCommand.o
+
+# target to build an object file
+ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/ConnectCommand.cpp.o
+.PHONY : ConnectCommand.cpp.o
+
+ConnectCommand.i: ConnectCommand.cpp.i
+
+.PHONY : ConnectCommand.i
+
+# target to preprocess a source file
+ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/ConnectCommand.cpp.i
+.PHONY : ConnectCommand.cpp.i
+
+ConnectCommand.s: ConnectCommand.cpp.s
+
+.PHONY : ConnectCommand.s
+
+# target to generate assembly for a file
+ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/ConnectCommand.cpp.s
+.PHONY : ConnectCommand.cpp.s
+
+DefineVarCommand.o: DefineVarCommand.cpp.o
+
+.PHONY : DefineVarCommand.o
+
+# target to build an object file
+DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/DefineVarCommand.cpp.o
+.PHONY : DefineVarCommand.cpp.o
+
+DefineVarCommand.i: DefineVarCommand.cpp.i
+
+.PHONY : DefineVarCommand.i
+
+# target to preprocess a source file
+DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/DefineVarCommand.cpp.i
+.PHONY : DefineVarCommand.cpp.i
+
+DefineVarCommand.s: DefineVarCommand.cpp.s
+
+.PHONY : DefineVarCommand.s
+
+# target to generate assembly for a file
+DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/DefineVarCommand.cpp.s
+.PHONY : DefineVarCommand.cpp.s
+
 Lexer.o: Lexer.cpp.o
 
 .PHONY : Lexer.o
@@ -240,6 +294,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ex3"
 	@echo "... edit_cache"
+	@echo "... ConnectCommand.o"
+	@echo "... ConnectCommand.i"
+	@echo "... ConnectCommand.s"
+	@echo "... DefineVarCommand.o"
+	@echo "... DefineVarCommand.i"
+	@echo "... DefineVarCommand.s"
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"
