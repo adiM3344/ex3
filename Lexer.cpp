@@ -78,5 +78,6 @@ string* Lexer::lexer(string file_name) {
         tokens.pop();
         cout <<i<<": "<< arr[i]<<endl;
     }
+
     return arr;
 }
