@@ -26,9 +26,9 @@ int main(int argc, char *argv[]) {
 //            i+=2;
 //        }
 //        else if(arr[i]=="var" && arr[i+2] == "="){
-////            DefineVarCommand* c = new DefineVarCommand(arr[i+1], "",arr[i+2]);
-////            commands_map.insert({arr[i],c});
-////            i+=2;
+//            DefineVarCommand* c = new DefineVarCommand(arr[i+1], arr[i+2]);
+//            commands_map.insert({arr[i],c});
+//            i+=2;
 //        }
 //        else if(arr[i]=="var"){
 //            DefineVarCommand* c = new DefineVarCommand(arr[i+1],arr[i+2],arr[i+4]);

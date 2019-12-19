@@ -19,6 +19,10 @@ public:
         this->direction = d;
         this->sim = s;
     }
+    DefineVarCommand(string n, string v) {
+        this->name = n;
+        this->value = v;
+    }
     virtual int execute();
 };
 

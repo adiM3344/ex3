@@ -21,7 +21,7 @@ string* Lexer::lexer(string file_name) {
                 curly_flag = true;
             }
             if (line[i] == '}') {
-                tokens.push(line[i]+"");
+                tokens.push("}");
             }
             if (line[i] == '(') {
                 tokens.push(line.substr(place, i-place));
