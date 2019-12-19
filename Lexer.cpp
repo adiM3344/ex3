@@ -9,7 +9,7 @@ using namespace std;
 
 string* Lexer::lexer(string file_name) {
     ifstream file(file_name, ios::in);
-    queue<string> strings;
+    queue<string> tokens;
     while (file) {
         string line;
         getline(file, line);
@@ -21,55 +21,62 @@ string* Lexer::lexer(string file_name) {
                 curly_flag = true;
             }
             if (line[i] == '}') {
-                strings.push(line[i]+"");
-                cout << line[i]<<endl;
+                tokens.push(line[i]+"");
             }
             if (line[i] == '(') {
-                strings.push(line.substr(place, i-place));
-                cout << line.substr(place, i-place)<<endl;
+                tokens.push(line.substr(place, i-place));
                 place = i + 1;
                 while (line[i] != ')') {
                     if (line[i] == ',') {
-                        strings.push(line.substr(place, i-place));
-                        cout << line.substr(place, i-place)<<endl;
-
+                        tokens.push(line.substr(place, i-place));
                         place = i + 1;
                     }
-                        i++;
+                    i++;
                 }
-                strings.push(line.substr(place, i-place));
-                cout << line.substr(place, i-place)<<endl;;
+                tokens.push(line.substr(place, i-place));
+            }
+            if ((line[i] == '-' && line [i+1] == '>') || ((line[i] == '<' && line [i+1] == '-'))) {
+                if (line[i-1] != ' ') {
+                    tokens.push(line.substr(place, i-place));
+                    place = i;
+                }
+                tokens.push(line.substr(place, 2));
+                i++;
+                place = i + 1;
+                if (line[i+1] == ' ') {
+                    i++;
+                    place = i + 1;
+                    i++;
+                }
             }
             if (line[i] == ' ') {
                 if ((line[i-1] == '=') || (line[i-1] == '<') || (line[i-1] == '>')) {
                     operator_flag = true;
                 }
-                strings.push(line.substr(place, i-place));
-                cout << line.substr(place, i-place)<<endl;
+                tokens.push(line.substr(place, i-place));
                 place = i + 1;
             }
             if (operator_flag) {
                 if (curly_flag == true) {
                     i = line.length() - 2;
-                    strings.push(line.substr(place, i - place));
-                    cout << line.substr(place, i - place) << endl;
+                    tokens.push(line.substr(place, i - place));
                     place = i + 1;
                     i = line.length();
-                    strings.push(line.substr(place, i - place));
-                    cout << line.substr(place, i - place) << endl;
+                    tokens.push(line.substr(place, i - place));
                 }
                 else {
                     i = line.length();
-                    strings.push(line.substr(place, i - place));
-                    cout << line.substr(place, i - place) << endl;
+                    tokens.push(line.substr(place, i - place));
                 }
             }
         }
     }
-    //    string str2="(";
-//    size_t found = whole_file.find(str2);
-//    if (found!=std::string::npos)
-    string nothing;
-    string* nothingp = &nothing;
-    return nothingp;
+    int size = tokens.size();
+    string arr[size];
+    for (int i = 0; i < size; i++) {
+        arr[i] = tokens.front();
+        tokens.pop();
+        cout <<i<<": "<< arr[i]<<endl;
+    }
+    return arr;
 }

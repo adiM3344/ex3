@@ -11,12 +11,13 @@ using namespace std;
 class DefineVarCommand : public Command {
 string name;
 string direction;
+string sim;
 string value;
 public:
-    DefineVarCommand(string n, string d, string v) {
+    DefineVarCommand(string n, string d, string s) {
         this->name = n;
         this->direction = d;
-        this->value = v;
+        this->sim = s;
     }
     virtual int execute();
 };

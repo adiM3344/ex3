@@ -11,8 +11,6 @@ iostream
 -
 Lexer.h
 /home/adi/CLionProjects/ex3/Lexer.h
-fstream
--
 queue
 -
 

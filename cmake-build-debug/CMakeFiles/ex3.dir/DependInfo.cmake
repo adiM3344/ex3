@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ortal/CLionProjects/ex3/ConnectCommand.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/ConnectCommand.cpp.o"
-  "/home/ortal/CLionProjects/ex3/DefineVarCommand.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/DefineVarCommand.cpp.o"
-  "/home/ortal/CLionProjects/ex3/Lexer.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Lexer.cpp.o"
-  "/home/ortal/CLionProjects/ex3/OpenServerCommand.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
-  "/home/ortal/CLionProjects/ex3/ex1.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/ex1.cpp.o"
-  "/home/ortal/CLionProjects/ex3/main.cpp" "/home/ortal/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
+  "/home/adi/CLionProjects/ex3/ConnectCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/ConnectCommand.cpp.o"
+  "/home/adi/CLionProjects/ex3/DefineVarCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/DefineVarCommand.cpp.o"
+  "/home/adi/CLionProjects/ex3/Lexer.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Lexer.cpp.o"
+  "/home/adi/CLionProjects/ex3/OpenServerCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
+  "/home/adi/CLionProjects/ex3/ex1.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/ex1.cpp.o"
+  "/home/adi/CLionProjects/ex3/main.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
