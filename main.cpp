@@ -5,6 +5,7 @@
 #include "OpenServerCommand.h"
 #include "ConnectCommand.h"
 #include "DefineVarCommand.h"
+#include "Data.h"
 #include <map>
 using namespace std;
 
@@ -13,7 +14,9 @@ int main(int argc, char *argv[]) {
     string s = argv[1];
     cout<< s<<endl;
     string *arr = lex.lexer(s);
-    map<string,Command*> commands_map;
+    Data data_map;
+    data_map.InitMap(arr);
+//    map<string,Command*> commands_map;
 //    for(int i=0;i<arr->length(); i++){
 //        if(arr[i]=="openDataServer"){
 //            OpenServerCommand* c = new OpenServerCommand(arr[i+1]);
