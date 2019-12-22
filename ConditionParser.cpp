@@ -13,6 +13,7 @@ ConditionParser::ConditionParser(const Data &data1, string *condition1) : data(d
 }
 int ConditionParser::execute() {
 
+
 }
 
 bool ConditionParser::checkCondition() {
