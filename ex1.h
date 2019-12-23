@@ -23,6 +23,8 @@ public:
 class Variable : public Expression{
     string name;
     double value;
+    string sim;
+    bool is_right = false;
 public:
     Variable(string varName, double val){
         name = varName;

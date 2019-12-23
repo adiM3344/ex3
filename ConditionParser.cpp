@@ -8,7 +8,7 @@
 using namespace std;
 
 ConditionParser::ConditionParser(const Data &data1, string *condition1) : data(data1), condition(condition1) {
-    this->data=data1;
+    this->data=data1; //singleton
     this->condition=condition1;
 }
 int ConditionParser::execute() {
@@ -18,21 +18,19 @@ int ConditionParser::execute() {
 
 bool ConditionParser::checkCondition() {
 //    Interpreter i = Interpreter();
-//    Expression *e = nullptr;
-//
-//
 //    double right_val,left_val;
 //    string sign,right_arg,left_arg;
 //
-//
 //    //get the sign and right argument
 //    sign = this->condition[1];
-//    right_arg = this->condition[2];
-//    left_arg=this->condition[0];
+//    Expression* right_con = i.interpret(this->condition[2]);
+//    Expression* left_con = i.interpret(this->condition[0]);
+//
+//// set values!!
 //
 //    //calculate the arguments
-//    right_val = e->calculate();
-//    left_val = e->calculate();
+//    right_val = right_con->calculate();
+//    left_val = left_con->calculate();
 //
 //    // if condition contains one argument and there is no comparing sign means
 //    // its boolean condition
@@ -55,7 +53,7 @@ bool ConditionParser::checkCondition() {
 //            return (left_val!= right_val);
 //        }
 //    }
-//
-//    return false;
+
+    return false;
 }
 

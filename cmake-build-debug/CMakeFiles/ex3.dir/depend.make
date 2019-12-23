@@ -43,6 +43,14 @@ CMakeFiles/ex3.dir/Parser.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/ex3.dir/Parser.cpp.o: ../Parser.h
 
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../PrintCommand.h
+
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.h
+
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ConditionParser.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Data.h
