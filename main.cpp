@@ -14,8 +14,10 @@ int main(int argc, char *argv[]) {
     string s = argv[1];
     cout<< s<<endl;
     string *arr = lex.lexer(s);
+    Singleton* singleton = Singleton::getInstance();
+    singleton->setLexerArray(arr);
     Data data_map;
-    data_map.InitMap(arr);
+    data_map.InitMap();
 //    map<string,Command*> commands_map;
 //    for(int i=0;i<arr->length(); i++){
 //        if(arr[i]=="openDataServer"){
