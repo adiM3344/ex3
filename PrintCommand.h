@@ -7,9 +7,16 @@
 
 
 #include "Command.h"
+#include <iostream>
+using namespace std;
+
 
 class PrintCommand : public Command{
+    string value;
 public:
+    PrintCommand(string s) {
+        this->value = s;
+    }
     virtual int execute();
 };
 

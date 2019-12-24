@@ -3,3 +3,7 @@
 //
 
 #include "PrintCommand.h"
+
+int PrintCommand::execute() {
+    cout<<this->value<<endl;
+}

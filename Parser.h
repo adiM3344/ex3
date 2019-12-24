@@ -6,16 +6,12 @@
 #define EX3_PARSER_H
 #include "string"
 #include "Command.h"
-#include "map"
+#include <map>
+#include "Singleton.h"
+
 using namespace std;
 
 class Parser {
-public:
-    Parser(const map<string, Command*>commands, string * lex_arr);
-
-private:
-    map<string, Command *> commands_map;
-    string* lexer_arr;
 public:
     void Parse();
 };
