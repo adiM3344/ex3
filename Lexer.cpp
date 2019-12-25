@@ -7,7 +7,7 @@
 using namespace std;
 
 
-string* Lexer::lexer(string file_name) {
+list<string> Lexer::lexer(string file_name) {
     ifstream file(file_name, ios::in);
     queue<string> tokens;
     while (file) {
@@ -98,11 +98,11 @@ string* Lexer::lexer(string file_name) {
         }
     }
     int size = tokens.size();
-    string arr[size];
+    list<string> list;
     for (int i = 0; i < size; i++) {
-        arr[i] = tokens.front();
+        list.push_back(tokens.front());
+        cout <<tokens.front()<<endl;
         tokens.pop();
-        cout <<i<<": "<< arr[i]<<endl;
     }
-    return arr;
+    return list;
 }

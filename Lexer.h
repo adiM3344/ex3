@@ -6,12 +6,12 @@
 #define EX3_LEXER_H
 
 #include <fstream>
+#include <list>
 using namespace std;
 
 class Lexer {
 public:
-    string* lexer(string file_name);
+    list<string> lexer(string file_name);
 };
-
 
 #endif //EX3_LEXER_H

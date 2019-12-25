@@ -9,12 +9,17 @@ using namespace std;
 
 void Parser::Parse(){
     Singleton* s = Singleton::getInstance();
+    list<string>* arr = s->getLexerArray();
+    list<string>::iterator it = arr->begin();
     int index=0;
-    while (index < (*s->getLexerArray())->size()){
-        string command = *s->getLexerArray()[index];
-        Command * c = (*s->getMap()).at(command);
+    while (it != (*arr).end()){
+        string command = *it;
+        Command* c = (*s->getMap()).at(command);
         if(c!= nullptr){
-            index+=c->execute();
+            index = c->execute();
+            for(int j=0; j<index; j++) {
+                it++;
+            }
         } else {
             throw "Unknown command: "+ command;
         }
