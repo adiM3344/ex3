@@ -8,8 +8,8 @@
 using namespace std;
 int IfCommand::execute() {
 
-    //check condition and parse if needed
-    while (ConditionParser::checkCondition()) {
-
-    }
+//    //check condition and parse if needed
+//    while (ConditionParser::checkCondition()) {
+//
+//    }
 }

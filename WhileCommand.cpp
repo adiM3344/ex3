@@ -9,8 +9,8 @@ using namespace std;
 int WhileCommand::execute() {
 
     //check condition and parse if needed
-    while (ConditionParser::checkCondition()) {
-
-    }
+//    while (ConditionParser::checkCondition()) {
+//
+//    }
 
 }

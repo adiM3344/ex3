@@ -1,7 +1,3 @@
-//
-// Created by adi on 12/23/19.
-//
-
 #ifndef EX3_SINGELTON_H
 #define EX3_SINGELTON_H
 
@@ -17,14 +13,11 @@ class Singleton {
     map<string,Command*> commands_map;
     string* lexer_arr;
     map<string, Variable> symbol_table;
+    Singleton();
 
 public:
-    static Singleton *getInstance() {
-        if (!instance) {
-            instance = new Singleton;
-        }
-        return instance;
-    }
+    static Singleton* getInstance();
+
     map<string, Command*>* getMap() {
         return &this->commands_map;
     }
