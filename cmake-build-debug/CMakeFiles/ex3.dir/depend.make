@@ -4,8 +4,15 @@
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../ConditionParser.cpp
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../ConditionParser.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../ConnectCommand.h
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../Data.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../DefineVarCommand.h
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../IfCommand.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../Lexer.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../WhileCommand.h
 CMakeFiles/ex3.dir/ConditionParser.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/ConnectCommand.cpp.o: ../Command.h
@@ -17,10 +24,13 @@ CMakeFiles/ex3.dir/Data.cpp.o: ../ConnectCommand.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../Data.cpp
 CMakeFiles/ex3.dir/Data.cpp.o: ../Data.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../DefineVarCommand.h
+CMakeFiles/ex3.dir/Data.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../IfCommand.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../Lexer.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/Data.cpp.o: ../Singleton.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../WhileCommand.h
+CMakeFiles/ex3.dir/Data.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/DefineVarCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.cpp
@@ -28,9 +38,17 @@ CMakeFiles/ex3.dir/DefineVarCommand.cpp.o: ../DefineVarCommand.h
 
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ConditionParser.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ConnectCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Data.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../DefineVarCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../IfCommand.cpp
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../IfCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Lexer.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../WhileCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Lexer.cpp
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Lexer.h
@@ -40,12 +58,24 @@ CMakeFiles/ex3.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.cpp
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.h
 
 CMakeFiles/ex3.dir/Parser.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/Parser.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/Parser.cpp.o: ../Parser.cpp
 CMakeFiles/ex3.dir/Parser.cpp.o: ../Parser.h
+CMakeFiles/ex3.dir/Parser.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/Parser.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
 CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../PrintCommand.h
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/PrintCommand.cpp.o: ../ex1.h
+
+CMakeFiles/ex3.dir/Singleton.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/Singleton.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/Singleton.cpp.o: ../Singleton.cpp
+CMakeFiles/ex3.dir/Singleton.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/Singleton.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
@@ -53,9 +83,17 @@ CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.h
 
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ConditionParser.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ConnectCommand.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Data.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../DefineVarCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../IfCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Lexer.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Singleton.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../WhileCommand.cpp
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../WhileCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/ex1.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/ex1.cpp.o: ../ex1.cpp
@@ -65,7 +103,12 @@ CMakeFiles/ex3.dir/main.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Data.h
 CMakeFiles/ex3.dir/main.cpp.o: ../DefineVarCommand.h
+CMakeFiles/ex3.dir/main.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/main.cpp.o: ../IfCommand.h
 CMakeFiles/ex3.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/ex3.dir/main.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/main.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/main.cpp.o: ../WhileCommand.h
+CMakeFiles/ex3.dir/main.cpp.o: ../ex1.h
 CMakeFiles/ex3.dir/main.cpp.o: ../main.cpp
 
