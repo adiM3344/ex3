@@ -8,6 +8,7 @@
 
 #include "Command.h"
 #include <iostream>
+#include "Singleton.h"
 using namespace std;
 
 
