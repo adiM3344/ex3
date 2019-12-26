@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adi/CLionProjects/ex3/SetVarCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/SetVarCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/Singleton.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Singleton.cpp.o"
   "/home/adi/CLionProjects/ex3/SleepCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/SleepCommand.cpp.o"
+  "/home/adi/CLionProjects/ex3/Variable.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Variable.cpp.o"
   "/home/adi/CLionProjects/ex3/WhileCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/WhileCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/ex1.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/ex1.cpp.o"
   "/home/adi/CLionProjects/ex3/main.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"

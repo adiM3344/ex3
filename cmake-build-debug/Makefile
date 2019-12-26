@@ -447,6 +447,33 @@ SleepCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/SleepCommand.cpp.s
 .PHONY : SleepCommand.cpp.s
 
+Variable.o: Variable.cpp.o
+
+.PHONY : Variable.o
+
+# target to build an object file
+Variable.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Variable.cpp.o
+.PHONY : Variable.cpp.o
+
+Variable.i: Variable.cpp.i
+
+.PHONY : Variable.i
+
+# target to preprocess a source file
+Variable.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Variable.cpp.i
+.PHONY : Variable.cpp.i
+
+Variable.s: Variable.cpp.s
+
+.PHONY : Variable.s
+
+# target to generate assembly for a file
+Variable.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Variable.cpp.s
+.PHONY : Variable.cpp.s
+
 WhileCommand.o: WhileCommand.cpp.o
 
 .PHONY : WhileCommand.o
@@ -573,6 +600,9 @@ help:
 	@echo "... SleepCommand.o"
 	@echo "... SleepCommand.i"
 	@echo "... SleepCommand.s"
+	@echo "... Variable.o"
+	@echo "... Variable.i"
+	@echo "... Variable.s"
 	@echo "... WhileCommand.o"
 	@echo "... WhileCommand.i"
 	@echo "... WhileCommand.s"

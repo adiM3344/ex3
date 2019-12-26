@@ -159,6 +159,12 @@
 		<Unit filename="/home/adi/CLionProjects/ex3/SleepCommand.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/Variable.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/Variable.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/adi/CLionProjects/ex3/WhileCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
