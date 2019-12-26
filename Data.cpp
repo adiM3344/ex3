@@ -1,3 +1,4 @@
+#include <vector>
 #include "Data.h"
 
 void Data::InitMap() {
@@ -31,14 +32,56 @@ void Data::InitMap() {
             DefineVarCommand* c = new DefineVarCommand(arr[i+1],arr[i+2],arr[i+4]);
             commands_map.insert({arr[i],c});
             i+=4;
-//        }  else if(arr[i]=="while"){
-//            WhileCommand* c = new WhileCommand(arr[i+1],arr[i+2],arr[i+4]);
-//            this->commands_map.insert({arr[i],c});
-//            i+=4;
-//        } else if(arr[i]=="if"){
-//            IfCommand* c = new IfCommand(arr[i+1],arr[i+2],arr[i+4]);
-//            this->commands_map.insert({arr[i],c});
-//            i+=4;
-       }
+        }
+        else if(arr[i]=="while"){
+            list<string> while_commands;
+            vector<string> condition;
+            i++;
+            while(arr[i] != "{") {
+                condition.push_back(arr[i]);
+                i++;
+            }
+            i++;
+            while(arr[i] != "}"){
+                while_commands.push_back(arr[i]);
+                i++;
+            }
+            i++;
+            WhileCommand* c = new WhileCommand(condition, while_commands);
+            commands_map.insert({"while",c});
+        }
+        else if(arr[i]=="if"){
+            list<string> if_commands;
+            vector<string> condition;
+            i++;
+            while(arr[i] != "{") {
+                condition.push_back(arr[i]);
+                i++;
+            }
+            i++;
+            while(arr[i] != "}"){
+                if_commands.push_back(arr[i]);
+                i++;
+            }
+            i++;
+            IfCommand* c = new IfCommand(condition, if_commands);
+            commands_map.insert({"if",c});
+        }
+        else if (arr[i] == "Print") {
+            PrintCommand* c = new PrintCommand(arr[i+1]);
+            commands_map.insert({arr[i],c});
+            i++;
+        }
+        else if (arr[i] == "Sleep") {
+            SleepCommand* c = new SleepCommand(arr[i+1]);
+            commands_map.insert({arr[i],c});
+            i++;
+        }
+        else{
+            SetVarCommand* c = new SetVarCommand(arr[i], arr[i+2]);
+            commands_map.insert({arr[i],c});
+            i+=2;
+        }
     }
+    singleton->setMap(commands_map);
 }

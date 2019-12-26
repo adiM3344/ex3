@@ -141,6 +141,12 @@
 		<Unit filename="/home/adi/CLionProjects/ex3/PrintCommand.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/SetVarCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/SetVarCommand.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/adi/CLionProjects/ex3/Singleton.cpp">
 			<Option target="ex3"/>
 		</Unit>

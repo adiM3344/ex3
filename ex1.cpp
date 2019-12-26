@@ -58,6 +58,13 @@ double UMinus::calculate() {
 Expression* Interpreter::interpret(string infix) {
     stack<char> opr;
     stack<Expression*> expr;
+    string temp = "";
+    for (int i =0; i<infix.size(); i++) {
+        if (infix[i] != ' ') {
+            temp += infix[i];
+        }
+    }
+    infix = temp;
     int i = 0;
     int size = infix.size();
     while (i < size) {
@@ -85,7 +92,13 @@ Expression* Interpreter::interpret(string infix) {
                 expr.push(new Variable(name, d));
             }
             else {
-                throw "Error: invalid input";
+                Singleton* s = Singleton::getInstance();
+                if (s->getSymbolTable()->count(name)) {
+                    double d = s->getSymbolTable()->at(name).calculate();
+                    expr.push(new Variable(name, d));
+                } else {
+                    throw "Error: invalid input";
+                }
             }
             i--;
         }

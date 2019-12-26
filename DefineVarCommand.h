@@ -6,18 +6,22 @@
 #define EX3_DEFINEVARCOMMAND_H
 
 #include <string>
+#include "ex1.h"
+#include "Singleton.h"
 using namespace std;
 
 class DefineVarCommand : public Command {
 string name;
-string direction;
-string sim;
+string sim = "";
 string value;
+bool is_right = false;
 public:
     DefineVarCommand(string n, string d, string s) {
         this->name = n;
-        this->direction = d;
         this->sim = s;
+        if (d == "->") {
+            this->is_right = true;
+        }
     }
     DefineVarCommand(string n, string v) {
         this->name = n;
