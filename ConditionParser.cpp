@@ -33,7 +33,7 @@ bool ConditionParser::checkCondition() {
 
     // if condition contains one argument and there is no comparing sign means
    //check condition for non boolean condition
-     if (!this->condition.size()>1) {
+     if (this->condition.size()>1) {
         //check if condition is satisfied
         if (sign == "<") {
             return (left_val< right_val);
