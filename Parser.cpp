@@ -11,7 +11,7 @@ void Parser::Parse(){
     Singleton* s = Singleton::getInstance();
     list<string>* arr = s->getLexerArray();
     list<string>::iterator it = arr->begin();
-    int index=0;
+    int index;
     while (it != (*arr).end()){
         string command = *it;
         Command* c = (*s->getMap()).at(command);
