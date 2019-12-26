@@ -23,7 +23,6 @@ void Parser::Parse(){
             }
         }// im the symbol table
        // } else if (){
-
         } else {
             throw "Unknown command: "+ command;
         }
