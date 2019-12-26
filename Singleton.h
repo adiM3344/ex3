@@ -6,6 +6,7 @@
 #include "ex1.h"
 #include <list>
 #include <map>
+#include "Variable.h"
 
 using namespace std;
 
