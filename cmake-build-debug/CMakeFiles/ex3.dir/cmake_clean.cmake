@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
   "CMakeFiles/ex3.dir/Parser.cpp.o"
   "CMakeFiles/ex3.dir/PrintCommand.cpp.o"
+  "CMakeFiles/ex3.dir/SetVarCommand.cpp.o"
   "CMakeFiles/ex3.dir/Singleton.cpp.o"
   "CMakeFiles/ex3.dir/SleepCommand.cpp.o"
   "CMakeFiles/ex3.dir/WhileCommand.cpp.o"

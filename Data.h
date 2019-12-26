@@ -15,7 +15,9 @@
 #include "WhileCommand.h"
 #include "IfCommand.h"
 #include "Singleton.h"
-using namespace std;
+#include "PrintCommand.h"
+#include "SleepCommand.h"
+#include "SetVarCommand.h"
 
 using namespace std;
 

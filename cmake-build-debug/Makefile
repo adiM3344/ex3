@@ -366,6 +366,33 @@ PrintCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/PrintCommand.cpp.s
 .PHONY : PrintCommand.cpp.s
 
+SetVarCommand.o: SetVarCommand.cpp.o
+
+.PHONY : SetVarCommand.o
+
+# target to build an object file
+SetVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/SetVarCommand.cpp.o
+.PHONY : SetVarCommand.cpp.o
+
+SetVarCommand.i: SetVarCommand.cpp.i
+
+.PHONY : SetVarCommand.i
+
+# target to preprocess a source file
+SetVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/SetVarCommand.cpp.i
+.PHONY : SetVarCommand.cpp.i
+
+SetVarCommand.s: SetVarCommand.cpp.s
+
+.PHONY : SetVarCommand.s
+
+# target to generate assembly for a file
+SetVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/SetVarCommand.cpp.s
+.PHONY : SetVarCommand.cpp.s
+
 Singleton.o: Singleton.cpp.o
 
 .PHONY : Singleton.o
@@ -537,6 +564,9 @@ help:
 	@echo "... PrintCommand.o"
 	@echo "... PrintCommand.i"
 	@echo "... PrintCommand.s"
+	@echo "... SetVarCommand.o"
+	@echo "... SetVarCommand.i"
+	@echo "... SetVarCommand.s"
 	@echo "... Singleton.o"
 	@echo "... Singleton.i"
 	@echo "... Singleton.s"

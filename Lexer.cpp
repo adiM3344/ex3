@@ -95,6 +95,9 @@ list<string> Lexer::lexer(string file_name) {
                 tokens.push(line.substr(place, i-place));
                 place = i + 1;
             }
+            else if (line[i] == '\t') {
+                place++;
+            }
         }
     }
     int size = tokens.size();

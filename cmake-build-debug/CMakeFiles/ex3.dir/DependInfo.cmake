@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adi/CLionProjects/ex3/OpenServerCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/Parser.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Parser.cpp.o"
   "/home/adi/CLionProjects/ex3/PrintCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/PrintCommand.cpp.o"
+  "/home/adi/CLionProjects/ex3/SetVarCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/SetVarCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/Singleton.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Singleton.cpp.o"
   "/home/adi/CLionProjects/ex3/SleepCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/SleepCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/WhileCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/WhileCommand.cpp.o"
