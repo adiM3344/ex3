@@ -29,6 +29,8 @@ string
 -
 
 /home/adi/CLionProjects/ex3/Data.cpp
+vector
+-
 Data.h
 /home/adi/CLionProjects/ex3/Data.h
 
@@ -55,12 +57,26 @@ IfCommand.h
 /home/adi/CLionProjects/ex3/IfCommand.h
 Singleton.h
 /home/adi/CLionProjects/ex3/Singleton.h
+PrintCommand.h
+/home/adi/CLionProjects/ex3/PrintCommand.h
+SleepCommand.h
+/home/adi/CLionProjects/ex3/SleepCommand.h
+SetVarCommand.h
+/home/adi/CLionProjects/ex3/SetVarCommand.h
+
+/home/adi/CLionProjects/ex3/DefineVarCommand.cpp
+DefineVarCommand.h
+/home/adi/CLionProjects/ex3/DefineVarCommand.h
 
 /home/adi/CLionProjects/ex3/DefineVarCommand.h
 Command.h
 /home/adi/CLionProjects/ex3/Command.h
 string
 -
+ex1.h
+/home/adi/CLionProjects/ex3/ex1.h
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
 
 /home/adi/CLionProjects/ex3/Expression.h
 
@@ -73,13 +89,11 @@ ConditionParser.h
 /home/adi/CLionProjects/ex3/IfCommand.h
 Command.h
 /home/adi/CLionProjects/ex3/Command.h
-
-/home/adi/CLionProjects/ex3/Lexer.cpp
-iostream
+string
 -
-Lexer.h
-/home/adi/CLionProjects/ex3/Lexer.h
-queue
+list
+-
+vector
 -
 
 /home/adi/CLionProjects/ex3/Lexer.h
@@ -94,6 +108,50 @@ Command.h
 string
 -
 
+/home/adi/CLionProjects/ex3/Parser.cpp
+Parser.h
+/home/adi/CLionProjects/ex3/Parser.h
+map
+/home/adi/CLionProjects/ex3/map
+
+/home/adi/CLionProjects/ex3/Parser.h
+string
+/home/adi/CLionProjects/ex3/string
+Command.h
+/home/adi/CLionProjects/ex3/Command.h
+map
+-
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
+
+/home/adi/CLionProjects/ex3/PrintCommand.cpp
+PrintCommand.h
+/home/adi/CLionProjects/ex3/PrintCommand.h
+
+/home/adi/CLionProjects/ex3/PrintCommand.h
+Command.h
+/home/adi/CLionProjects/ex3/Command.h
+iostream
+-
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
+
+/home/adi/CLionProjects/ex3/SetVarCommand.cpp
+SetVarCommand.h
+/home/adi/CLionProjects/ex3/SetVarCommand.h
+string
+-
+
+/home/adi/CLionProjects/ex3/SetVarCommand.h
+Command.h
+/home/adi/CLionProjects/ex3/Command.h
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
+
+/home/adi/CLionProjects/ex3/Singleton.cpp
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
+
 /home/adi/CLionProjects/ex3/Singleton.h
 iostream
 -
@@ -105,6 +163,26 @@ list
 -
 map
 -
+Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
+DefineVarCommand.h
+/home/adi/CLionProjects/ex3/DefineVarCommand.h
+
+/home/adi/CLionProjects/ex3/SleepCommand.h
+Command.h
+/home/adi/CLionProjects/ex3/Command.h
+iostream
+-
+
+/home/adi/CLionProjects/ex3/Variable.cpp
+Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
+
+/home/adi/CLionProjects/ex3/Variable.h
+Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
+string
+-
 
 /home/adi/CLionProjects/ex3/WhileCommand.cpp
 WhileCommand.h
@@ -115,16 +193,32 @@ ConditionParser.h
 /home/adi/CLionProjects/ex3/WhileCommand.h
 Command.h
 /home/adi/CLionProjects/ex3/Command.h
+string
+-
+list
+-
+vector
+-
+
+/home/adi/CLionProjects/ex3/ex1.cpp
+ex1.h
+/home/adi/CLionProjects/ex3/ex1.h
+Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
 
 /home/adi/CLionProjects/ex3/ex1.h
 Expression.h
 /home/adi/CLionProjects/ex3/Expression.h
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
 string
 -
 stack
 -
 map
 -
+Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
 
 /home/adi/CLionProjects/ex3/main.cpp
 iostream

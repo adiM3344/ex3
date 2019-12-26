@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/SetVarCommand.cpp.o"
   "CMakeFiles/ex3.dir/Singleton.cpp.o"
   "CMakeFiles/ex3.dir/SleepCommand.cpp.o"
+  "CMakeFiles/ex3.dir/Variable.cpp.o"
   "CMakeFiles/ex3.dir/WhileCommand.cpp.o"
   "CMakeFiles/ex3.dir/ex1.cpp.o"
   "CMakeFiles/ex3.dir/main.cpp.o"
