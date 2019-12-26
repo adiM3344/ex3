@@ -7,10 +7,6 @@
 
 using namespace std;
 
-ConditionParser::ConditionParser(const Data &data1, string *condition1) : data(data1), condition(condition1) {
-    this->data=data1; //singleton
-    this->condition=condition1;
-}
 int ConditionParser::execute() {
 
 

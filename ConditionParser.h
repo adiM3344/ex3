@@ -11,12 +11,13 @@
 #include <vector>
 
 class ConditionParser : public Command{
-    Data data;
-    string *condition;
+    vector<string> condition;
 public:
-    ConditionParser(const Data &data, string *condition);
+    ConditionParser(vector<string> cond) {
+        this->condition = cond;
+    }
     virtual int execute();
-    bool checkCondition();
+    static bool checkCondition();
 };
 
 
