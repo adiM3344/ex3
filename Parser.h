@@ -13,10 +13,7 @@
 using namespace std;
 
 class Parser {
-    list<string> command_list;
 public:
-    Parser(const list<string> &commandList);
-
     void Parse();
 };
 
