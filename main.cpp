@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     singleton->setLexerArray(&lexer_list);
     Data data_map;
     data_map.InitMap();
-    Parser *parser = new Parser();
+    Parser *parser = new Parser(*singleton->getLexerArray());
     parser->Parse();
     return 0;
 }
