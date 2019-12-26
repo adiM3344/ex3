@@ -20,7 +20,6 @@ int WhileCommand::execute() {
 WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) : ConditionParser(
         condition), command_list(commandList) {
     this->command_list=commandList;
-
 }
 
 
