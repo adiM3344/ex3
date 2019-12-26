@@ -1,16 +1,17 @@
 //
 // Created by ortal on 20/12/2019.
 //
-
 #ifndef EX3_CONDITIONPARSER_H
 #define EX3_CONDITIONPARSER_H
 
 
 #include "Command.h"
-#include "Data.h"
 #include <vector>
+#include <string>
 
-class ConditionParser : public Command{
+using namespace std;
+
+class ConditionParser: public Command{
     vector<string> condition;
 
 public:

@@ -11,15 +11,18 @@
 
 using namespace std;
 int WhileCommand::execute() {
-    while (ConditionParser* p=new ConditionParser(this->condition)) {
+    while (ConditionParser::checkCondition()) {
         Parser *parser=new Parser(this->command_list);
         parser->Parse();
     }
 }
 
-WhileCommand::WhileCommand(const vector<string> &condition, const vector<string> &condition1,
-                           const list<string> &commandList) : ConditionParser(condition), condition(condition1),
-                                                              command_list(commandList) {}
+WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) : ConditionParser(
+        condition), command_list(commandList) {
+    this->command_list=commandList;
+
+}
+
 
 
 

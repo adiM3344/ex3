@@ -8,18 +8,12 @@
 
 /home/ortal/CLionProjects/ex3/Command.h
 
-/home/ortal/CLionProjects/ex3/ConditionParser.cpp
-ConditionParser.h
-/home/ortal/CLionProjects/ex3/ConditionParser.h
-ex1.h
-/home/ortal/CLionProjects/ex3/ex1.h
-
 /home/ortal/CLionProjects/ex3/ConditionParser.h
 Command.h
 /home/ortal/CLionProjects/ex3/Command.h
-Data.h
-/home/ortal/CLionProjects/ex3/Data.h
 vector
+-
+string
 -
 
 /home/ortal/CLionProjects/ex3/ConnectCommand.h
@@ -107,8 +101,6 @@ string
 -
 list
 -
-Command.h
-/home/ortal/CLionProjects/ex3/Command.h
 ConditionParser.h
 /home/ortal/CLionProjects/ex3/ConditionParser.h
 vector
@@ -213,8 +205,6 @@ vector
 -
 list
 -
-Command.h
-/home/ortal/CLionProjects/ex3/Command.h
 
 /home/ortal/CLionProjects/ex3/ex1.h
 Expression.h

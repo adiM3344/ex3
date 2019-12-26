@@ -5,19 +5,9 @@ CMakeFiles/ex3.dir/ConditionParser.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
  /home/ortal/CLionProjects/ex3/ConditionParser.cpp
  /home/ortal/CLionProjects/ex3/ConditionParser.h
- /home/ortal/CLionProjects/ex3/ConnectCommand.h
- /home/ortal/CLionProjects/ex3/Data.h
- /home/ortal/CLionProjects/ex3/DefineVarCommand.h
  /home/ortal/CLionProjects/ex3/Expression.h
- /home/ortal/CLionProjects/ex3/IfCommand.h
- /home/ortal/CLionProjects/ex3/Lexer.h
- /home/ortal/CLionProjects/ex3/OpenServerCommand.h
- /home/ortal/CLionProjects/ex3/PrintCommand.h
- /home/ortal/CLionProjects/ex3/SetVarCommand.h
  /home/ortal/CLionProjects/ex3/Singleton.h
- /home/ortal/CLionProjects/ex3/SleepCommand.h
  /home/ortal/CLionProjects/ex3/Variable.h
- /home/ortal/CLionProjects/ex3/WhileCommand.h
  /home/ortal/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/ConnectCommand.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
@@ -52,21 +42,12 @@ CMakeFiles/ex3.dir/DefineVarCommand.cpp.o
 CMakeFiles/ex3.dir/IfCommand.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
  /home/ortal/CLionProjects/ex3/ConditionParser.h
- /home/ortal/CLionProjects/ex3/ConnectCommand.h
- /home/ortal/CLionProjects/ex3/Data.h
- /home/ortal/CLionProjects/ex3/DefineVarCommand.h
  /home/ortal/CLionProjects/ex3/Expression.h
  /home/ortal/CLionProjects/ex3/IfCommand.cpp
  /home/ortal/CLionProjects/ex3/IfCommand.h
- /home/ortal/CLionProjects/ex3/Lexer.h
- /home/ortal/CLionProjects/ex3/OpenServerCommand.h
  /home/ortal/CLionProjects/ex3/Parser.h
- /home/ortal/CLionProjects/ex3/PrintCommand.h
- /home/ortal/CLionProjects/ex3/SetVarCommand.h
  /home/ortal/CLionProjects/ex3/Singleton.h
- /home/ortal/CLionProjects/ex3/SleepCommand.h
  /home/ortal/CLionProjects/ex3/Variable.h
- /home/ortal/CLionProjects/ex3/WhileCommand.h
  /home/ortal/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/Lexer.cpp.o
  /home/ortal/CLionProjects/ex3/Lexer.cpp
@@ -117,18 +98,9 @@ CMakeFiles/ex3.dir/Variable.cpp.o
 CMakeFiles/ex3.dir/WhileCommand.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
  /home/ortal/CLionProjects/ex3/ConditionParser.h
- /home/ortal/CLionProjects/ex3/ConnectCommand.h
- /home/ortal/CLionProjects/ex3/Data.h
- /home/ortal/CLionProjects/ex3/DefineVarCommand.h
  /home/ortal/CLionProjects/ex3/Expression.h
- /home/ortal/CLionProjects/ex3/IfCommand.h
- /home/ortal/CLionProjects/ex3/Lexer.h
- /home/ortal/CLionProjects/ex3/OpenServerCommand.h
  /home/ortal/CLionProjects/ex3/Parser.h
- /home/ortal/CLionProjects/ex3/PrintCommand.h
- /home/ortal/CLionProjects/ex3/SetVarCommand.h
  /home/ortal/CLionProjects/ex3/Singleton.h
- /home/ortal/CLionProjects/ex3/SleepCommand.h
  /home/ortal/CLionProjects/ex3/Variable.h
  /home/ortal/CLionProjects/ex3/WhileCommand.cpp
  /home/ortal/CLionProjects/ex3/WhileCommand.h

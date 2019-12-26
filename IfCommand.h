@@ -10,15 +10,15 @@
 using namespace std;
 
 
-#include "Command.h"
 #include "ConditionParser.h"
 #include <vector>
 #include <string>
 
-class IfCommand : public Command{
-    vector<string> condition;
+class IfCommand : public ConditionParser{
     list<string> command_list;
 public:
+
+    IfCommand(const vector<string> &condition, const list<string> &commandList);
 
     virtual int execute();
 
