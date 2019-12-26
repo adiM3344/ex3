@@ -9,11 +9,10 @@ using namespace std;
 
 void Parser::Parse(){
     Singleton* s = Singleton::getInstance();
-    list<string>* command_list = s->getLexerArray();
-    list<string>::iterator it = command_list->begin();
+    list<string>::iterator it = this->command_list.begin();
     map<string, Command*> *map = s->getMap();
     int index=0;
-    while (it != command_list->end()){
+    while (it != this->command_list.end()){
         string command = *it;
         if((*map).at(command)){
         Command* c = (*map).at(command);
