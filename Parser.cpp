@@ -9,10 +9,11 @@ using namespace std;
 
 void Parser::Parse(){
     Singleton* s = Singleton::getInstance();
-    list<string>* arr = s->getLexerArray();
-    list<string>::iterator it = arr->begin();
-    int index;
-    while (it != (*arr).end()){
+    //list<string>* arr = s->getLexerArray();
+    list<string>::iterator it = this->command_list.begin();
+    map<string, Command*> *map =s->getMap();
+    int index=0;
+    while (it != (this->command_list).end()){
         string command = *it;
         Command* c = (*s->getMap()).at(command);
         if(c!= nullptr){
@@ -24,4 +25,8 @@ void Parser::Parse(){
             throw "Unknown command: "+ command;
         }
     }
+}
+
+Parser::Parser(const list<string> &commandList) : command_list(commandList) {
+    this->command_list=commandList;
 }

@@ -12,12 +12,12 @@
 
 class ConditionParser : public Command{
     vector<string> condition;
+
 public:
-    ConditionParser(vector<string> cond) {
-        this->condition = cond;
-    }
+    ConditionParser(const vector<string> &condition);
+
     virtual int execute();
-    static bool checkCondition();
+    bool checkCondition();
 };
 
 

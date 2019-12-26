@@ -6,22 +6,21 @@
 #include "ConditionParser.h"
 #include <string>
 #include <vector>
-#include "Singleton.h"
+#include "Parser.h"
 
 
 using namespace std;
 int WhileCommand::execute() {
-    Singleton* singleton = Singleton::getInstance();
-    map<string,Command*>* commands =singleton->getMap();
-    //check condition and parse if needed
-    while (ConditionParser::checkCondition()) {
-        for(int i=0;i< this->command_list.size(); i++) {
-
-        }
+    while (ConditionParser* p=new ConditionParser(this->condition)) {
+        Parser *parser=new Parser(this->command_list);
+        parser->Parse();
     }
-    return this->command_list.size()+2;
 }
 
-WhileCommand::WhileCommand(const vector<string> &commandList) : command_list(commandList) {
-    this->command_list=commandList;
-}
+WhileCommand::WhileCommand(const vector<string> &condition, const vector<string> &condition1,
+                           const list<string> &commandList) : ConditionParser(condition), condition(condition1),
+                                                              command_list(commandList) {}
+
+
+
+

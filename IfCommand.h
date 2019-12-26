@@ -15,10 +15,10 @@ using namespace std;
 #include <vector>
 #include <string>
 
-class IfCommand : public  Command{
-    vector<string> command_list;
+class IfCommand : public Command{
+    vector<string> condition;
+    list<string> command_list;
 public:
-    IfCommand(const vector<string> &commandList);
 
     virtual int execute();
 

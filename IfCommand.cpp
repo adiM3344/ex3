@@ -4,21 +4,15 @@
 
 #include "IfCommand.h"
 #include "ConditionParser.h"
+#include "Parser.h"
 #include <string>
 #include <vector>
 
 using namespace std;
 int IfCommand::execute() {
     //check condition and parse if needed
-    if (ConditionParser::checkCondition()) {
-        for(){
-
-        }
+    if (ConditionParser* p=new ConditionParser(this->condition)) {
+        Parser *parser=new Parser(this->command_list);
+        parser->Parse();
     }
-    return this->command_list.size()+2;
 }
-
-IfCommand::IfCommand(const vector<string> &commandList) : command_list(commandList) {
-    this->command_list=commandList;
-}
-

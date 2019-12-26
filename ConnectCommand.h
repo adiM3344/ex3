@@ -6,17 +6,23 @@
 #define EX3_CONNECTCOMMAND_H
 
 #include "Command.h"
-
+#include <sys/socket.h>
+#include <string>
+#include <iostream>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <cstring>
 
 #include <string>
 using namespace std;
 class ConnectCommand : public Command {
-    string port;
+    int port;
     string ip;
 public:
-    ConnectCommand(string p,string ipAdd) {
-        this->port=p;
-        this->ip=ipAdd;
+    ConnectCommand(string ipAdd, string p) {
+        this->port=stoi(p);
+        this->ip = ipAdd;
     }
 
     virtual int execute();
