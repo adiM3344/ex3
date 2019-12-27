@@ -17,8 +17,9 @@ int main(int argc, char *argv[]) {
     Singleton* singleton = Singleton::getInstance();
     singleton->setLexerArray(&lexer_list);
     Data data_map;
-    data_map.InitMap();
-    Parser *parser = new Parser(*singleton->getLexerArray());
+    map<string, Command*> map = data_map.InitMap(singleton->getLexerArray());
+    singleton->setMap(map);
+    Parser *parser = new Parser(*singleton->getLexerArray(), *singleton->getMap());
     parser->Parse();
     return 0;
 }

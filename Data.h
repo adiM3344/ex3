@@ -23,7 +23,7 @@ using namespace std;
 
 class Data {
 public:
-    void InitMap();
+    map<string, Command*> InitMap(list<string>* l);
 };
 
 

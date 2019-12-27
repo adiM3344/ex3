@@ -1,6 +1,3 @@
-//
-// Created by ortal on 22/12/2019.
-//
 
 #ifndef EX3_PARSER_H
 #define EX3_PARSER_H
@@ -14,8 +11,9 @@ using namespace std;
 
 class Parser {
     list<string> command_list;
+    map<string, Command*> command_map;
 public:
-    Parser(const list<string> &commandList);
+    Parser(const list<string> &commandList, const map<string, Command*> &commandMap);
     void Parse();
 };
 

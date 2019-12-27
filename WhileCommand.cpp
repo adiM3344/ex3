@@ -1,24 +1,18 @@
-//
-// Created by ortal on 20/12/2019.
-//
 
 #include "WhileCommand.h"
-#include "ConditionParser.h"
-#include <string>
-#include <vector>
-#include "Parser.h"
 
-
-using namespace std;
 int WhileCommand::execute() {
+    //check condition and parse if needed
     while (ConditionParser::checkCondition()) {
-        Parser *parser=new Parser(this->command_list);
+        Data data;
+        Parser *parser = new Parser(this->command_list, data.InitMap(&this->command_list));
         parser->Parse();
     }
+    return 6 + this->command_list.size();
 }
 
-WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) : ConditionParser(
-        condition), command_list(commandList) {
+WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) :
+    ConditionParser(condition), command_list(commandList) {
     this->command_list=commandList;
 }
 

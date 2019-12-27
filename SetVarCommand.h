@@ -1,6 +1,3 @@
-//
-// Created by adi on 12/25/19.
-//
 
 #ifndef EX3_SETVARCOMMAND_H
 #define EX3_SETVARCOMMAND_H

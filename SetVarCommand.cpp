@@ -1,9 +1,5 @@
-//
-// Created by adi on 12/25/19.
-//
 
 #include "SetVarCommand.h"
-#include <string>
 
 int SetVarCommand::execute() {
     Singleton* singleton = Singleton::getInstance();
@@ -12,4 +8,5 @@ int SetVarCommand::execute() {
     Interpreter i;
     Expression* e = i.interpret(this->value);
     v->setValue(e->calculate());
+    return 3;
 }

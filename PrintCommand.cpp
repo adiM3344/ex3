@@ -14,4 +14,5 @@ int PrintCommand::execute() {
     else {
         cout << this->value << endl;
     }
+    return 2;
 }

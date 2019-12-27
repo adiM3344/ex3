@@ -23,6 +23,7 @@ CMakeFiles/ex3.dir/Data.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../IfCommand.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../Lexer.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../OpenServerCommand.h
+CMakeFiles/ex3.dir/Data.cpp.o: ../Parser.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../PrintCommand.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../SetVarCommand.h
 CMakeFiles/ex3.dir/Data.cpp.o: ../Singleton.h
@@ -41,12 +42,21 @@ CMakeFiles/ex3.dir/DefineVarCommand.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ConditionParser.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ConnectCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Data.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../DefineVarCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../IfCommand.cpp
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../IfCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Lexer.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../OpenServerCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Parser.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../PrintCommand.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../SetVarCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../SleepCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../Variable.h
+CMakeFiles/ex3.dir/IfCommand.cpp.o: ../WhileCommand.h
 CMakeFiles/ex3.dir/IfCommand.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Lexer.cpp
@@ -97,9 +107,18 @@ CMakeFiles/ex3.dir/Variable.cpp.o: ../Variable.h
 
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ConditionParser.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../ConnectCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Data.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../DefineVarCommand.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../IfCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Lexer.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../OpenServerCommand.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Parser.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../PrintCommand.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../SetVarCommand.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Singleton.h
+CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../SleepCommand.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../Variable.h
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../WhileCommand.cpp
 CMakeFiles/ex3.dir/WhileCommand.cpp.o: ../WhileCommand.h

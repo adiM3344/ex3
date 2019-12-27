@@ -1,3 +1,4 @@
+
 #ifndef EX3_SINGELTON_H
 #define EX3_SINGELTON_H
 

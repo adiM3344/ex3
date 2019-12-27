@@ -1,34 +1,54 @@
-//
-// Created by ortal on 22/12/2019.
-//
 
 #include "Parser.h"
-#include "map"
-
-using namespace std;
 
 void Parser::Parse(){
-    Singleton* s = Singleton::getInstance();
     list<string>::iterator it = this->command_list.begin();
-    map<string, Command*> *map = s->getMap();
+    map<string, Command*> *map = &this->command_map;
     int index=0;
+    int while_count=0;
+    int if_count=0;
+    int counter = 0;
     while (it != this->command_list.end()){
+        counter++;
         string command = *it;
-        if((*map).at(command)){
-        Command* c = (*map).at(command);
-        if(c!= nullptr){
-            index = c->execute();
-            for(int j=0; j<index; j++) {
-                it++;
+        string temp;
+        if (it != this->command_list.begin()) {
+            temp = *(--it);
+            it++;
+        } else if (command != "openDataServer") {
+            it++;
+            command = *it;
+        }
+        if (command == "=") {
+            command = temp + "Set";
+        } else if (temp == "while") {
+            while_count++;
+            command = "while";
+            command += (while_count + '0');
+        } else if (temp == "if") {
+            if_count++;
+            command = "if";
+            command += (if_count + '0');
+        }
+        if((*map).count(command)){
+            Command* c = (*map).at(command);
+            if(c!= nullptr){
+                index = c->execute();
+                for(int j=0; j<index; j++) {
+                    it++;
+                }
+                if (counter == this->command_map.size()) {
+                    it--;
+                }
             }
-        }// im the symbol table
-       // } else if (){
-        } else {
+        }
+        else {
             throw "Unknown command: "+ command;
         }
     }
 }
 
-Parser::Parser(const list<string> &commandList) : command_list(commandList) {
+Parser::Parser(const list<string> &commandList, const map<string, Command*> &commandMap){
     this->command_list=commandList;
+    this->command_map=commandMap;
 }
