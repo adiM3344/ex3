@@ -18,6 +18,7 @@
 #include "PrintCommand.h"
 #include "SleepCommand.h"
 #include "SetVarCommand.h"
+#include "NumCommand.h"
 
 using namespace std;
 

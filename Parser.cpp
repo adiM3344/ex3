@@ -8,6 +8,7 @@ void Parser::Parse(){
     int while_count=0;
     int if_count=0;
     int counter = 0;
+    int end = map->at("commands_num")->execute();
     while (it != this->command_list.end()){
         counter++;
         string command = *it;
@@ -16,6 +17,7 @@ void Parser::Parse(){
             temp = *(--it);
             it++;
         } else if (command != "openDataServer") {
+            temp = command;
             it++;
             command = *it;
         }
@@ -29,16 +31,19 @@ void Parser::Parse(){
             if_count++;
             command = "if";
             command += (if_count + '0');
+        } else if (temp == "Print") {
+            command = "P" + command;
         }
-        if((*map).count(command)){
-            Command* c = (*map).at(command);
+        if(map->count(command)){
+            Command* c = map->at(command);
             if(c!= nullptr){
                 index = c->execute();
                 for(int j=0; j<index; j++) {
                     it++;
                 }
-                if (counter == this->command_map.size()) {
+                if (counter == end) {
                     it--;
+                    cout<<"~ parser is done ~"<<endl;
                 }
             }
         }

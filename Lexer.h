@@ -7,6 +7,7 @@
 
 #include <fstream>
 #include <list>
+#include "Singleton.h"
 using namespace std;
 
 class Lexer {

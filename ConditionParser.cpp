@@ -36,15 +36,15 @@ bool ConditionParser::checkCondition() {
      if (this->condition.size()>1) {
         //check if condition is satisfied
         if (sign == "<") {
-            return (left_val< right_val);
+            return (left_val < right_val);
         } else if (sign == ">") {
-            return (right_val> left_val);
+            return (left_val > right_val);
         } else if (sign == "==") {
             return (left_val == right_val);
         } else if (sign == "<=") {
-            return (left_val<=right_val);
+            return (left_val <= right_val);
         } else if (sign == ">=") {
-            return (right_val>= left_val);
+            return (left_val >= right_val);
         } else if (sign == "!=") {
             return (left_val!= right_val);
         }

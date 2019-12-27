@@ -8,6 +8,7 @@ int WhileCommand::execute() {
         Parser *parser = new Parser(this->command_list, data.InitMap(&this->command_list));
         parser->Parse();
     }
+    cout<<"~ starting while command ~"<<endl;
     return 6 + this->command_list.size();
 }
 

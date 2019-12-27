@@ -4,19 +4,25 @@
 
 #include "Command.h"
 #include "Singleton.h"
+#include <vector>
 
 using namespace std;
 
 
 class SetVarCommand : public Command {
     string name;
-    string value;
+    vector<string> values;
+    int place;
 public:
     SetVarCommand(string n, string v){
         this->name = n;
-        this->value = v;
+        this->values.push_back(v);
+        this->place = 0;
     }
     int execute() override;
+    void addValue(string v) {
+        this->values.push_back(v);
+    }
 };
 
 

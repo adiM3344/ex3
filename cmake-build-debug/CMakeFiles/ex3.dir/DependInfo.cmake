@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adi/CLionProjects/ex3/DefineVarCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/DefineVarCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/IfCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/IfCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/Lexer.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Lexer.cpp.o"
+  "/home/adi/CLionProjects/ex3/NumCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/NumCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/OpenServerCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
   "/home/adi/CLionProjects/ex3/Parser.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/Parser.cpp.o"
   "/home/adi/CLionProjects/ex3/PrintCommand.cpp" "/home/adi/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/PrintCommand.cpp.o"

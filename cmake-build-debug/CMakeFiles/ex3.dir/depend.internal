@@ -23,6 +23,7 @@ CMakeFiles/ex3.dir/Data.cpp.o
  /home/adi/CLionProjects/ex3/Expression.h
  /home/adi/CLionProjects/ex3/IfCommand.h
  /home/adi/CLionProjects/ex3/Lexer.h
+ /home/adi/CLionProjects/ex3/NumCommand.h
  /home/adi/CLionProjects/ex3/OpenServerCommand.h
  /home/adi/CLionProjects/ex3/Parser.h
  /home/adi/CLionProjects/ex3/PrintCommand.h
@@ -50,6 +51,7 @@ CMakeFiles/ex3.dir/IfCommand.cpp.o
  /home/adi/CLionProjects/ex3/IfCommand.cpp
  /home/adi/CLionProjects/ex3/IfCommand.h
  /home/adi/CLionProjects/ex3/Lexer.h
+ /home/adi/CLionProjects/ex3/NumCommand.h
  /home/adi/CLionProjects/ex3/OpenServerCommand.h
  /home/adi/CLionProjects/ex3/Parser.h
  /home/adi/CLionProjects/ex3/PrintCommand.h
@@ -60,8 +62,17 @@ CMakeFiles/ex3.dir/IfCommand.cpp.o
  /home/adi/CLionProjects/ex3/WhileCommand.h
  /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/Lexer.cpp.o
+ /home/adi/CLionProjects/ex3/Command.h
+ /home/adi/CLionProjects/ex3/Expression.h
  /home/adi/CLionProjects/ex3/Lexer.cpp
  /home/adi/CLionProjects/ex3/Lexer.h
+ /home/adi/CLionProjects/ex3/Singleton.h
+ /home/adi/CLionProjects/ex3/Variable.h
+ /home/adi/CLionProjects/ex3/ex1.h
+CMakeFiles/ex3.dir/NumCommand.cpp.o
+ /home/adi/CLionProjects/ex3/Command.h
+ /home/adi/CLionProjects/ex3/NumCommand.cpp
+ /home/adi/CLionProjects/ex3/NumCommand.h
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
  /home/adi/CLionProjects/ex3/OpenServerCommand.cpp
@@ -114,6 +125,7 @@ CMakeFiles/ex3.dir/WhileCommand.cpp.o
  /home/adi/CLionProjects/ex3/Expression.h
  /home/adi/CLionProjects/ex3/IfCommand.h
  /home/adi/CLionProjects/ex3/Lexer.h
+ /home/adi/CLionProjects/ex3/NumCommand.h
  /home/adi/CLionProjects/ex3/OpenServerCommand.h
  /home/adi/CLionProjects/ex3/Parser.h
  /home/adi/CLionProjects/ex3/PrintCommand.h
@@ -140,6 +152,7 @@ CMakeFiles/ex3.dir/main.cpp.o
  /home/adi/CLionProjects/ex3/Expression.h
  /home/adi/CLionProjects/ex3/IfCommand.h
  /home/adi/CLionProjects/ex3/Lexer.h
+ /home/adi/CLionProjects/ex3/NumCommand.h
  /home/adi/CLionProjects/ex3/OpenServerCommand.h
  /home/adi/CLionProjects/ex3/Parser.h
  /home/adi/CLionProjects/ex3/PrintCommand.h

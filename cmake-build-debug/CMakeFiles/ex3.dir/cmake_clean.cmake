@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex3.dir/DefineVarCommand.cpp.o"
   "CMakeFiles/ex3.dir/IfCommand.cpp.o"
   "CMakeFiles/ex3.dir/Lexer.cpp.o"
+  "CMakeFiles/ex3.dir/NumCommand.cpp.o"
   "CMakeFiles/ex3.dir/OpenServerCommand.cpp.o"
   "CMakeFiles/ex3.dir/Parser.cpp.o"
   "CMakeFiles/ex3.dir/PrintCommand.cpp.o"

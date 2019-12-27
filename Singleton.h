@@ -33,9 +33,6 @@ public:
     void setMap(map<string, Command*> map) {
         this->commands_map = map;
     }
-    void setSymbolTable(map<string, Variable> map) {
-        this->symbol_table = map;
-    }
     void setLexerArray(list<string>* list) {
         this->lexer_arr = *list;
     }

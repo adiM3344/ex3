@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
     list<string> lexer_list = lex.lexer(s);
     Singleton* singleton = Singleton::getInstance();
     singleton->setLexerArray(&lexer_list);
+    cout<<"~ lexer is done ~"<<endl;
     Data data_map;
     map<string, Command*> map = data_map.InitMap(singleton->getLexerArray());
     singleton->setMap(map);

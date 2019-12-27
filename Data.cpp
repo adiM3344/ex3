@@ -7,6 +7,7 @@ map<string, Command*> Data::InitMap(list<string>* l) {
     string arr[l->size()];
     int while_count = 0;
     int if_count = 0;
+    int commands_num = 0;
     for (int i = 0; i < l->size(); i++) {
         arr[i] = *it;
         it++;
@@ -15,21 +16,25 @@ map<string, Command*> Data::InitMap(list<string>* l) {
         if(arr[i]=="openDataServer"){
             OpenServerCommand* c = new OpenServerCommand(arr[i+1]);
             commands_map.insert({arr[i],c});
+            commands_num++;
             i++;
         }
         else if(arr[i]=="connectControlClient"){
             ConnectCommand* c = new ConnectCommand(arr[i+1],arr[i+2]);
             commands_map.insert({arr[i],c});
+            commands_num++;
             i+=2;
         }
         else if(arr[i]=="var" && arr[i+2] == "="){
             DefineVarCommand* c = new DefineVarCommand(arr[i+1], arr[i+2]);
             commands_map.insert({arr[i+1],c});
+            commands_num++;
             i+=2;
         }
         else if(arr[i]=="var"){
             DefineVarCommand* c = new DefineVarCommand(arr[i+1],arr[i+2],arr[i+4]);
             commands_map.insert({arr[i+1],c});
+            commands_num++;
             i+=4;
         }
         else if(arr[i]=="while"){
@@ -50,6 +55,7 @@ map<string, Command*> Data::InitMap(list<string>* l) {
             string command_name = "while";
             command_name += (while_count + '0');
             commands_map.insert({command_name ,c});
+            commands_num++;
         }
         else if(arr[i]=="if"){
             if_count++;
@@ -69,23 +75,34 @@ map<string, Command*> Data::InitMap(list<string>* l) {
             string command_name = "if";
             command_name += (if_count + '0');
             commands_map.insert({command_name,c});
+            commands_num++;
         }
-        else if (arr[i] == "Print") {
+        else if (arr[i] == "Print" || arr[i] == "print") {
             PrintCommand* c = new PrintCommand(arr[i+1]);
-            commands_map.insert({arr[i+1],c});
+            commands_map.insert({("P"+arr[i+1]),c});
+            commands_num++;
             i++;
         }
-        else if (arr[i] == "Sleep") {
+        else if (arr[i] == "Sleep" || arr[i] == "sleep") {
             SleepCommand* c = new SleepCommand(arr[i+1]);
             commands_map.insert({arr[i+1],c});
+            commands_num++;
             i++;
         }
         else{
-            SetVarCommand* c = new SetVarCommand(arr[i], arr[i+2]);
             string set_command = arr[i] + "Set";
-            commands_map.insert({set_command,c});
+            if (commands_map.count(set_command)) {
+                SetVarCommand* c = (SetVarCommand*)commands_map.at(set_command);
+                c->addValue(arr[i+2]);
+            } else {
+                SetVarCommand* c = new SetVarCommand(arr[i], arr[i+2]);
+                commands_map.insert({set_command, c});
+            }
+            commands_num++;
             i+=2;
         }
     }
+    Command* c = new NumCommand(commands_num);
+    commands_map.insert({"commands_num", c});
     return commands_map;
 }

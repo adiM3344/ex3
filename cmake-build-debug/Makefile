@@ -285,6 +285,33 @@ Lexer.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/Lexer.cpp.s
 .PHONY : Lexer.cpp.s
 
+NumCommand.o: NumCommand.cpp.o
+
+.PHONY : NumCommand.o
+
+# target to build an object file
+NumCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/NumCommand.cpp.o
+.PHONY : NumCommand.cpp.o
+
+NumCommand.i: NumCommand.cpp.i
+
+.PHONY : NumCommand.i
+
+# target to preprocess a source file
+NumCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/NumCommand.cpp.i
+.PHONY : NumCommand.cpp.i
+
+NumCommand.s: NumCommand.cpp.s
+
+.PHONY : NumCommand.s
+
+# target to generate assembly for a file
+NumCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/NumCommand.cpp.s
+.PHONY : NumCommand.cpp.s
+
 OpenServerCommand.o: OpenServerCommand.cpp.o
 
 .PHONY : OpenServerCommand.o
@@ -582,6 +609,9 @@ help:
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"
+	@echo "... NumCommand.o"
+	@echo "... NumCommand.i"
+	@echo "... NumCommand.s"
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"

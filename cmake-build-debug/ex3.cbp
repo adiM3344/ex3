@@ -123,6 +123,12 @@
 		<Unit filename="/home/adi/CLionProjects/ex3/Lexer.h">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/NumCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/ex3/NumCommand.h">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/adi/CLionProjects/ex3/OpenServerCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
