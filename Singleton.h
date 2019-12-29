@@ -15,7 +15,8 @@ class Singleton {
     static Singleton *instance;
     map<string,Command*> commands_map;
     list<string> lexer_arr;
-    map<string, Variable> symbol_table;
+    map<string, Variable*> symbol_table;
+    map<string,Variable*> xml_map;
     Singleton();
 
 public:
@@ -24,7 +25,7 @@ public:
     map<string, Command*>* getMap() {
         return &this->commands_map;
     }
-    map<string, Variable>* getSymbolTable() {
+    map<string, Variable*>* getSymbolTable() {
         return &this->symbol_table;
     }
     list<string>* getLexerArray() {

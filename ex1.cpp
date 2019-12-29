@@ -71,7 +71,7 @@ Expression* Interpreter::interpret(string infix) {
             else {
                 Singleton* s = Singleton::getInstance();
                 if (s->getSymbolTable()->count(name)) {
-                    double d = s->getSymbolTable()->at(name).calculate();
+                    double d = s->getSymbolTable()->at(name)->calculate();
                     expr.push(new Variable(name, d));
                 } else {
                     throw "Error: invalid input";
