@@ -35,6 +35,9 @@ public:
     void setValue(double v) {
         this->value = v;
     }
+    void setDirection(bool direction) {
+        this->is_right = direction;
+    }
     virtual double calculate(){
         return value;
     }

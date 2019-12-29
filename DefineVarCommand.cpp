@@ -5,12 +5,16 @@
 #include "DefineVarCommand.h"
 
 using namespace std;
+using namespace std;
 int DefineVarCommand::execute() {
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*>* var_map = singleton->getSymbolTable();
     if (sim != "") {
-        Variable var(this->name, this->sim, this->is_right);
-        var_map->insert({this->name, &var});
+        Variable* var = singleton->getXMLMap()->at(this->sim);
+        if (this->is_right) {
+            var->setDirection(this->is_right);
+        }
+        var_map->insert({this->name, var});
         return 5;
     }
     else {
