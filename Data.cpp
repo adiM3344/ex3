@@ -237,6 +237,5 @@ void Data::UpdateXMLMap(vector<double> values) {
     Variable* var35 =  new Variable("rpm","/engines/engine/rpm",false);
     var35->setValue(values[35]);
     xml_map["/engines/engine/rpm"] = var35;
-
     singleton->setXMLMap(&xml_map);
 }
