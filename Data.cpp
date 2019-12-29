@@ -114,4 +114,6 @@ void Data::InitXMLMap() {
     xml_map["/instrumentation/airspeed-indicator/indicated-speed-kt"]=new Variable("airs","/instrumentation/airspeed-indicator/indicated-speed-kt",
                                                                                    false);
 //    xml_map[]
+
+
 }
