@@ -5,7 +5,6 @@
 #include "DefineVarCommand.h"
 
 using namespace std;
-using namespace std;
 int DefineVarCommand::execute() {
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*>* var_map = singleton->getSymbolTable();
