@@ -11,8 +11,24 @@ CMakeFiles/ex3.dir/ConditionParser.cpp.o
  /home/ortal/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/ConnectCommand.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
+ /home/ortal/CLionProjects/ex3/ConditionParser.h
  /home/ortal/CLionProjects/ex3/ConnectCommand.cpp
  /home/ortal/CLionProjects/ex3/ConnectCommand.h
+ /home/ortal/CLionProjects/ex3/Data.h
+ /home/ortal/CLionProjects/ex3/DefineVarCommand.h
+ /home/ortal/CLionProjects/ex3/Expression.h
+ /home/ortal/CLionProjects/ex3/IfCommand.h
+ /home/ortal/CLionProjects/ex3/Lexer.h
+ /home/ortal/CLionProjects/ex3/NumCommand.h
+ /home/ortal/CLionProjects/ex3/OpenServerCommand.h
+ /home/ortal/CLionProjects/ex3/Parser.h
+ /home/ortal/CLionProjects/ex3/PrintCommand.h
+ /home/ortal/CLionProjects/ex3/SetVarCommand.h
+ /home/ortal/CLionProjects/ex3/Singleton.h
+ /home/ortal/CLionProjects/ex3/SleepCommand.h
+ /home/ortal/CLionProjects/ex3/Variable.h
+ /home/ortal/CLionProjects/ex3/WhileCommand.h
+ /home/ortal/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/Data.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
  /home/ortal/CLionProjects/ex3/ConditionParser.h
@@ -75,8 +91,24 @@ CMakeFiles/ex3.dir/NumCommand.cpp.o
  /home/ortal/CLionProjects/ex3/NumCommand.h
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
+ /home/ortal/CLionProjects/ex3/ConditionParser.h
+ /home/ortal/CLionProjects/ex3/ConnectCommand.h
+ /home/ortal/CLionProjects/ex3/Data.h
+ /home/ortal/CLionProjects/ex3/DefineVarCommand.h
+ /home/ortal/CLionProjects/ex3/Expression.h
+ /home/ortal/CLionProjects/ex3/IfCommand.h
+ /home/ortal/CLionProjects/ex3/Lexer.h
+ /home/ortal/CLionProjects/ex3/NumCommand.h
  /home/ortal/CLionProjects/ex3/OpenServerCommand.cpp
  /home/ortal/CLionProjects/ex3/OpenServerCommand.h
+ /home/ortal/CLionProjects/ex3/Parser.h
+ /home/ortal/CLionProjects/ex3/PrintCommand.h
+ /home/ortal/CLionProjects/ex3/SetVarCommand.h
+ /home/ortal/CLionProjects/ex3/Singleton.h
+ /home/ortal/CLionProjects/ex3/SleepCommand.h
+ /home/ortal/CLionProjects/ex3/Variable.h
+ /home/ortal/CLionProjects/ex3/WhileCommand.h
+ /home/ortal/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/Parser.cpp.o
  /home/ortal/CLionProjects/ex3/Command.h
  /home/ortal/CLionProjects/ex3/Expression.h

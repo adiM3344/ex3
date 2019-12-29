@@ -2,11 +2,15 @@
 // Created by ortal on 17/12/2019.
 //
 
+#include <thread>
 #include "ConnectCommand.h"
+#include "OpenServerCommand.h"
+
 using namespace std;
 int ConnectCommand::execute() {
 //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
+    Singleton::getInstance()->setClientSocket(client_socket);
     if (client_socket == -1) {
         //error
         std::cerr << "Could not create a socket"<<std::endl;
@@ -30,20 +34,20 @@ int ConnectCommand::execute() {
         std::cout<<"Client is now connected to server" <<std::endl;
     }
 
-    //if here we made a connection
-    char hello[] = "Hi from client";
-    int is_sent = send(client_socket , hello , strlen(hello) , 0 );
-    if (is_sent == -1) {
-        std::cout<<"Error sending message"<<std::endl;
-    } else {
-        std::cout<<"Hello message sent to server" <<std::endl;
-    }
+//    //if here we made a connection
+//    char hello[] = "Hi from client";
+//    int is_sent = send(client_socket , hello , strlen(hello) , 0 );
+//    if (is_sent == -1) {
+//        std::cout<<"Error sending message"<<std::endl;
+//    } else {
+//        std::cout<<"Hello message sent to server" <<std::endl;
+//    }
 
-    char buffer[1024] = {0};
-    int valread = read( client_socket , buffer, 1024);
-    std::cout<<buffer<<std::endl;
+//    char buffer[1024] = {0};
+//    int valread = read( client_socket , buffer, 1024);
+//    std::cout<<buffer<<std::endl;
 
-    close(client_socket);
+//    close(client_socket);
 
     return 4;
 }

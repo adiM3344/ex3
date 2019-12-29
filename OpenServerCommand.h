@@ -10,8 +10,9 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <cstring>
-
+#include "Singleton.h"
 #include <string>
+#include "Data.h"
 using namespace std;
 
 class OpenServerCommand: public Command {
@@ -20,7 +21,7 @@ public:
     OpenServerCommand(string p) {
         this->port= stoi(p);
     }
-
+    static void readFromSim(int client_socket);
     virtual int execute();
 
 

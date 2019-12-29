@@ -17,9 +17,9 @@ class Variable : public Expression{
     string sim;
     bool is_right = false;
 public:
-    Variable(string varName,string varSim){
+    Variable(string varName, double varValue){
         this->name = varName;
-        this->sim = varSim;
+        this->value = varValue;
     }
     Variable(string varName, string varSim, bool direction){
         this->name = varName;
@@ -37,6 +37,9 @@ public:
     }
     void setDirection(bool direction) {
         this->is_right = direction;
+    }
+    string getSimPath() {
+        return this->sim;
     }
     virtual double calculate(){
         return value;

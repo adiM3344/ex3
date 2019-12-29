@@ -107,13 +107,15 @@ map<string, Command*> Data::InitMap(list<string>* l) {
     return commands_map;
 
 }
-void Data::InitXMLMap() {
+void Data::UpdateXMLMap(vector<double> values) {
     Singleton* singleton = Singleton::getInstance();
-//    map<string, Variable*> xml_map = nullptr;
     map<string, Variable*> xml_map;
-    xml_map["/instrumentation/airspeed-indicator/indicated-speed-kt"]=new Variable("airs","/instrumentation/airspeed-indicator/indicated-speed-kt",
-                                                                                   false);
+   // Variable* var0 =  new Variable(,"/instrumentation/airspeed-indicator/indicated-speed-kt",false);
+    //var0->setValue(values[0]);
+    //todo adi
+    //xml_map["/instrumentation/airspeed-indicator/indicated-speed-kt"] = var0;
+
 //    xml_map[]
 
-
+    singleton->setXMLMap(&xml_map);
 }

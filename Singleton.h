@@ -7,7 +7,9 @@
 #include "ex1.h"
 #include <list>
 #include <map>
+#include <vector>
 #include "Variable.h"
+#include <thread>
 
 using namespace std;
 
@@ -17,6 +19,8 @@ class Singleton {
     list<string> lexer_arr;
     map<string, Variable*> symbol_table;
     map<string,Variable*> xml_map;
+    vector<thread*> threads;
+    int client_socket{};
     Singleton();
 
 public:
@@ -31,8 +35,14 @@ public:
     map<string, Variable*>* getXMLMap() {
         return &this->xml_map;
     }
+    vector<thread*>* getThreads(){
+        return &this->threads;
+    }
+    int getClientSocket() {
+        return this->client_socket;
+    }
     void setXMLMap(map<string, Variable*>* map) {
-        this->xml_map = map;
+        this->xml_map = *map;
     }
     list<string>* getLexerArray() {
         return &this->lexer_arr;
@@ -42,6 +52,12 @@ public:
     }
     void setLexerArray(list<string>* list) {
         this->lexer_arr = *list;
+    }
+    void addThread(thread* t) {
+        this->threads.push_back(t);
+    }
+    void setClientSocket(int i) {
+        this->client_socket = i;
     }
 };
 #endif //EX3_SINGELTON_H

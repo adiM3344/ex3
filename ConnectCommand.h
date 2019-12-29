@@ -24,7 +24,7 @@ public:
         this->port=stoi(p);
         this->ip = ipAdd;
     }
-
+    static void readFromClient();
     virtual int execute();
 
 

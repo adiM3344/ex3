@@ -25,7 +25,7 @@ using namespace std;
 class Data {
 public:
     map<string, Command*> InitMap(list<string>* l);
-    void InitXMLMap();
+    static void UpdateXMLMap(vector<double> values);
 
 };
 

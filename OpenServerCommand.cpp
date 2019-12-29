@@ -5,9 +5,28 @@
 #include <string>
 #include <iostream>
 #include <mutex>
+#include <thread>
 #include "OpenServerCommand.h"
 using namespace std;
-mutex mutex;
+//using namespace std::literals::chrono_literals;
+mutex mtx;
+
+void OpenServerCommand::readFromSim(int client_socket) {
+    int valread=0;
+    while(valread!=-1){
+        mtx.lock();
+        //reading from client
+        char buffer[100000] = {0};
+        valread = read( client_socket , buffer, 100000);
+        std::cout<<buffer<<std::endl;
+        vector<double> values;
+        for(int i=0;i < strlen(buffer); i++) {
+//todo ortal
+        }
+        Data::UpdateXMLMap(values);
+        mtx.unlock();
+    }
+}
 
 int OpenServerCommand::execute() {
 //create socket
@@ -49,12 +68,10 @@ int OpenServerCommand::execute() {
         return -4;
     }
     cout << "connected" << endl;
-    close(socketfd); //closing the listening socket
+//    close(socketfd); //closing the listening socket
+    thread *t = new thread(OpenServerCommand::readFromSim, client_socket);
+    Singleton::getInstance()->addThread(t);
 
-    //reading from client
-    char buffer[1024] = {0};
-    int valread = read( client_socket , buffer, 1024);
-    std::cout<<buffer<<std::endl;
 
     //writing back to client
     char *hello = "Hello, I can hear you! \n";
@@ -62,3 +79,5 @@ int OpenServerCommand::execute() {
     std::cout<<"Hello message sent\n"<<std::endl;
     return 2;
 }
+
+
