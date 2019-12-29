@@ -28,6 +28,12 @@ public:
     map<string, Variable*>* getSymbolTable() {
         return &this->symbol_table;
     }
+    map<string, Variable*>* getXMLMap() {
+        return &this->xml_map;
+    }
+    void setXMLMap(map<string, Variable*>* map) {
+        this->xml_map = map;
+    }
     list<string>* getLexerArray() {
         return &this->lexer_arr;
     }

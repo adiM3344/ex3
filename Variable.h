@@ -17,9 +17,9 @@ class Variable : public Expression{
     string sim;
     bool is_right = false;
 public:
-    Variable(string varName, double val){
+    Variable(string varName,string varSim){
         this->name = varName;
-        this->value = val;
+        this->sim = varSim;
     }
     Variable(string varName, string varSim, bool direction){
         this->name = varName;
