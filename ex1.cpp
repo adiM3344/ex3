@@ -96,17 +96,24 @@ Expression* Interpreter::interpret(string infix) {
         }
         // if it's an operator, add to expression stack if precedence is higher
         else if ((infix[i] == '*' || infix[i] == '/' || infix[i] == '+' || infix[i] =='-')) {
+            bool doubleNeg = false;
             // if the next char is also an operator
             if ((infix[i+1] == '*' || infix[i+1] == '/' || infix[i+1] == '+' || infix[i+1] == '-')) {
-                throw "Error: invalid input";
+                if (infix[i] == '-' && infix[i+1] == '-') {
+                    doubleNeg = true;
+                } else {
+                    throw "Error: invalid input";
+                }
             }
             // check if it is an unary operator
             if ((infix[i] == '-' || infix[i] == '+') && (infix[i-1] == '(' || i == 0)) {
-                if (infix[i] =='-') {
-                    expr.push(new Value(-1));
-                }
                 if (infix[i] =='+') {
                     expr.push(new Value(1));
+                } else if (doubleNeg) {
+                    i++;
+                    expr.push(new Value(1));
+                } else if (infix[i] =='-') {
+                    expr.push(new Value(-1));
                 }
                 opr.push('*');
             }
