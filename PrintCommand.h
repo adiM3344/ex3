@@ -1,6 +1,3 @@
-//
-// Created by ortal on 22/12/2019.
-//
 
 #ifndef EX3_PRINTCOMMAND_H
 #define EX3_PRINTCOMMAND_H
@@ -13,12 +10,17 @@ using namespace std;
 
 
 class PrintCommand : public Command{
-    string value;
+    vector<string> values;
+    int place;
 public:
     PrintCommand(string s) {
-        this->value = s;
+        this->values.push_back(s);
+        this->place = 0;
     }
     virtual int execute();
+    void addValue(string s) {
+        this->values.push_back(s);
+    }
 };
 
 

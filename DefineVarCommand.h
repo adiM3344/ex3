@@ -1,33 +1,44 @@
-//
-// Created by adi on 12/17/19.
-//
-#include "Command.h"
+
 #ifndef EX3_DEFINEVARCOMMAND_H
 #define EX3_DEFINEVARCOMMAND_H
 
+#include "Command.h"
 #include <string>
 #include "ex1.h"
 #include "Singleton.h"
 using namespace std;
 
 class DefineVarCommand : public Command {
-string name;
-string sim = "";
-string value;
-bool is_right = false;
+    vector<vector<string>> vars;
+    int place;
 public:
     DefineVarCommand(string n, string d, string s) {
-        this->name = n;
-        this->sim = s;
-        if (d == "->") {
-            this->is_right = true;
-        }
+        vector<string> fields;
+        fields.push_back(n);
+        fields.push_back(s);
+        fields.push_back("");
+        fields.push_back(d);
+        this->vars.push_back(fields);
+        this->place = 0;
     }
     DefineVarCommand(string n, string v) {
-        this->name = n;
-        this->value = v;
+        vector<string> fields;
+        fields.push_back(n);
+        fields.push_back("");
+        fields.push_back(v);
+        fields.push_back("");
+        this->vars.push_back(fields);
+        this->place = 0;
     }
     virtual int execute();
+    void addVar(string n, string s, string v, string d) {
+        vector<string> fields;
+        fields.push_back(n);
+        fields.push_back(s);
+        fields.push_back(v);
+        fields.push_back(d);
+        this->vars.push_back(fields);
+    }
 };
 
 

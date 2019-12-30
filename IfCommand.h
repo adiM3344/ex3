@@ -14,6 +14,7 @@ using namespace std;
 
 class IfCommand : public ConditionParser{
     list<string> command_list;
+    bool unary_condition = false;
 public:
     IfCommand(const vector<string> &condition, const list<string> &commandList);
     virtual int execute();

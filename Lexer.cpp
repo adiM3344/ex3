@@ -1,6 +1,4 @@
-//
-// Created by adi on 12/16/19.
-//
+
 #include <iostream>
 #include "Lexer.h"
 #include <queue>
@@ -91,6 +89,10 @@ list<string> Lexer::lexer(string file_name) {
                 tokens.push(line.substr(place, line.length() - place));
                 i = line.length();
             }
+            else if (line[i] == '\t') {
+                i++;
+                place++;
+            }
             else if (line[i] == ' ' && line[i+1] == ' ' && line[i+2] == ' ' && line[i+3] == ' ') {
                 i += 3;
                 place = i + 1;
@@ -106,8 +108,8 @@ list<string> Lexer::lexer(string file_name) {
     string toke="";
     for (int i = 0; i < size; i++) {
         toke=tokens.front();
-        if(toke[0]=='"' && toke[toke.size()-1]=='"'){
-           toke= toke.substr(1,toke.size()-2);
+        if(toke[0]=='\"' && toke[toke.size()-1]=='\"' && toke[1] == '/'){
+           toke = toke.substr(1,toke.size()-2);
         }
         list.push_back(toke);
         cout <<toke<<endl;

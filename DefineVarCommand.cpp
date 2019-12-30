@@ -7,22 +7,24 @@ using namespace std;
 
 int DefineVarCommand::execute() {
     Singleton* singleton = Singleton::getInstance();
-    map<string, Variable*>* var_map = singleton->getSymbolTable();
-    if (sim != "") {
+    vector<string> vars_fields = this->vars[this->place];
+    this->place = this->place+1;
+    // if "sim" is not defined
+    if (vars_fields[1] != "") {
         //singleton->getMTX()->lock();
-        Variable* var = singleton->getXMLMap()->at(this->sim);
+        Variable* var = singleton->getXMLMap()->at(vars_fields[1]);
         //singleton->getMTX()->unlock();
-        if (this->is_right) {
-            var->setDirection(this->is_right);
+        if (vars_fields[3] == "->") {
+            var->setDirection(true);
         }
-        var_map->insert({this->name, var});
+        singleton->getSymbolTable()->insert({vars_fields[0], var});
         return 5;
     }
     else {
-        Variable *v = var_map->at(this->value);
-        double val = v->calculate();
-        Variable var(this->name, val);
-        var_map->insert({this->name, &var});
+        Interpreter i;
+        double val = i.interpret(vars_fields[2])->calculate();
+        Variable var(vars_fields[0], val);
+        singleton->getSymbolTable()->insert({vars_fields[0], &var});
         return 4;
     }
 }

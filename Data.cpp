@@ -26,14 +26,24 @@ map<string, Command*> Data::InitMap(list<string>* l) {
             i+=2;
         }
         else if(arr[i]=="var" && arr[i+2] == "="){
-            DefineVarCommand* c = new DefineVarCommand(arr[i+1], arr[i+2]);
-            commands_map.insert({arr[i+1],c});
+            if (commands_map.count("var")) {
+                DefineVarCommand* c = (DefineVarCommand*)commands_map.at("var");
+                c->addVar(arr[i+1], "", arr[i+3], "");
+            } else {
+                DefineVarCommand* c = new DefineVarCommand(arr[i+1], arr[i+3]);
+                commands_map.insert({"var", c});
+            }
             commands_num++;
-            i+=2;
+            i+=3;
         }
         else if(arr[i]=="var"){
-            DefineVarCommand* c = new DefineVarCommand(arr[i+1],arr[i+2],arr[i+4]);
-            commands_map.insert({arr[i+1],c});
+            if (commands_map.count("var")) {
+                DefineVarCommand* c = (DefineVarCommand*)commands_map.at("var");
+                c->addVar(arr[i+1], arr[i+4], "", arr[i+2]);
+            } else {
+                DefineVarCommand* c = new DefineVarCommand(arr[i+1], arr[i+2], arr[i+4]);
+                commands_map.insert({"var", c});
+            }
             commands_num++;
             i+=4;
         }
@@ -78,14 +88,24 @@ map<string, Command*> Data::InitMap(list<string>* l) {
             commands_num++;
         }
         else if (arr[i] == "Print" || arr[i] == "print") {
-            PrintCommand* c = new PrintCommand(arr[i+1]);
-            commands_map.insert({("P"+arr[i+1]),c});
+            if (commands_map.count("Print")) {
+                PrintCommand* c = (PrintCommand*)commands_map.at("Print");
+                c->addValue(arr[i+1]);
+            } else {
+                PrintCommand* c = new PrintCommand(arr[i+1]);
+                commands_map.insert({"Print", c});
+            }
             commands_num++;
             i++;
         }
         else if (arr[i] == "Sleep" || arr[i] == "sleep") {
-            SleepCommand* c = new SleepCommand(arr[i+1]);
-            commands_map.insert({arr[i+1],c});
+            if (commands_map.count("Sleep")) {
+                SleepCommand* c = (SleepCommand*)commands_map.at("Sleep");
+                c->addValue(arr[i+1]);
+            } else {
+                SleepCommand* c = new SleepCommand(arr[i+1]);
+                commands_map.insert({"Sleep", c});
+            }
             commands_num++;
             i++;
         }

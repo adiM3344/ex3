@@ -6,35 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/ortal/CLionProjects/ex3/Command.h
+/home/adi/CLionProjects/ex3/Command.h
 
-/home/ortal/CLionProjects/ex3/Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
 
-/home/ortal/CLionProjects/ex3/SetVarCommand.cpp
-SetVarCommand.h
-/home/ortal/CLionProjects/ex3/SetVarCommand.h
-sys/socket.h
--
-string
--
-cstring
--
+/home/adi/CLionProjects/ex3/PrintCommand.cpp
+PrintCommand.h
+/home/adi/CLionProjects/ex3/PrintCommand.h
 
-/home/ortal/CLionProjects/ex3/SetVarCommand.h
+/home/adi/CLionProjects/ex3/PrintCommand.h
 Command.h
-/home/ortal/CLionProjects/ex3/Command.h
-Singleton.h
-/home/ortal/CLionProjects/ex3/Singleton.h
-vector
+/home/adi/CLionProjects/ex3/Command.h
+iostream
 -
+Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
 
-/home/ortal/CLionProjects/ex3/Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
 iostream
 -
 Command.h
-/home/ortal/CLionProjects/ex3/Command.h
+/home/adi/CLionProjects/ex3/Command.h
 ex1.h
-/home/ortal/CLionProjects/ex3/ex1.h
+/home/adi/CLionProjects/ex3/ex1.h
 list
 -
 map
@@ -42,23 +36,23 @@ map
 vector
 -
 Variable.h
-/home/ortal/CLionProjects/ex3/Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
 thread
 -
 mutex
 -
 
-/home/ortal/CLionProjects/ex3/Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
 Expression.h
-/home/ortal/CLionProjects/ex3/Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
 string
 -
 
-/home/ortal/CLionProjects/ex3/ex1.h
+/home/adi/CLionProjects/ex3/ex1.h
 Expression.h
-/home/ortal/CLionProjects/ex3/Expression.h
+/home/adi/CLionProjects/ex3/Expression.h
 Singleton.h
-/home/ortal/CLionProjects/ex3/Singleton.h
+/home/adi/CLionProjects/ex3/Singleton.h
 string
 -
 stack
@@ -66,5 +60,5 @@ stack
 map
 -
 Variable.h
-/home/ortal/CLionProjects/ex3/Variable.h
+/home/adi/CLionProjects/ex3/Variable.h
 

@@ -15,6 +15,7 @@ using namespace std;
 
 class WhileCommand : public ConditionParser {
     list<string> command_list;
+    bool unary_condition = false;
 public:
     WhileCommand(const vector<string> &condition, const list<string> &commandList);
     virtual int execute();

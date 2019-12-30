@@ -10,10 +10,10 @@ int SetVarCommand::execute() {
     map<string, Variable*>* symbol_table = singleton->getSymbolTable();
     Variable* v = symbol_table->at(this->name);
     Interpreter i;
-    Expression* e = i.interpret(this->values[place]);
-    this->place = place + 1;
-    v->setValue(e->calculate());
-    string message = "set " + v->getSimPath() + " " + this->values[place] + '\r' + '\n';
+    double d = i.interpret(this->values[this->place])->calculate();
+    this->place = this->place + 1;
+    v->setValue(d);
+    string message = "set " + v->getSimPath() + " " + this->values[this->place] + '\r' + '\n';
     //cout<<"the message is: "<<  message<<endl;
     int is_sent = send(singleton->getClientSocket(), message.c_str(), strlen(message.c_str()), 0);
     if (is_sent == -1) {

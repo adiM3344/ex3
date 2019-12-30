@@ -3,6 +3,9 @@
 #include <thread>
 
 int SleepCommand::execute() {
-    this_thread::sleep_for(chrono::milliseconds(this->value));
+    Interpreter i;
+    double d = i.interpret(this->values[this->place])->calculate();
+    this->place = this->place+1;
+    this_thread::sleep_for(chrono::milliseconds((int)d));
     return 2;
 }

@@ -1,17 +1,22 @@
 #ifndef EX3_SLEEPCOMMAND_H
 #define EX3_SLEEPCOMMAND_H
 
-
 #include "Command.h"
+#include "ex1.h"
 #include <iostream>
 using namespace std;
 
 class SleepCommand : public Command{
-    int value;
+    vector<string> values;
+    int place;
 public:
     SleepCommand(string s) {
-        this->value = stoi(s);
+        this->values.push_back(s);
+        this->place = 0;
     }
     virtual int execute();
+    void addValue(string s) {
+        this->values.push_back(s);
+    }
 };
 #endif //EX3_SLEEPCOMMAND_H

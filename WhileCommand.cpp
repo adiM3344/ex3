@@ -9,12 +9,18 @@ int WhileCommand::execute() {
         parser->Parse();
     }
     cout<<"~ starting while command ~"<<endl;
+    if (this->unary_condition) {
+        return 4 + this->command_list.size();
+    }
     return 6 + this->command_list.size();
 }
 
 WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) :
     ConditionParser(condition), command_list(commandList) {
     this->command_list=commandList;
+    if (condition.size() == 1) {
+        this->unary_condition = true;
+    }
 }
 
 

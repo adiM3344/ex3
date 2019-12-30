@@ -1,18 +1,15 @@
-//
-// Created by ortal on 22/12/2019.
-//
 
 #include "PrintCommand.h"
 
 int PrintCommand::execute() {
-    Singleton* s = Singleton::getInstance();
-    map<string, Variable*>* symbol_table = s->getSymbolTable();
-    if (symbol_table->count(this->value) > 0) {
-        Variable *v = symbol_table->find(this->value)->second;
-        cout << v->calculate() << endl;
-    }
-    else {
-        cout << this->value << endl;
+    string print = this->values[this->place];
+    this->place = this->place+1;
+    if (print[0] == '\"') {
+        cout << print.substr(1,print.size()-2) << endl;
+    } else {
+        Interpreter i;
+        double d = i.interpret(print)->calculate();
+        cout << d << endl;
     }
     return 2;
 }
