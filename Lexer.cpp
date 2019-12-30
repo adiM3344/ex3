@@ -103,9 +103,14 @@ list<string> Lexer::lexer(string file_name) {
     }
     int size = tokens.size();
     list<string> list;
+    string toke="";
     for (int i = 0; i < size; i++) {
-        list.push_back(tokens.front());
-        cout <<tokens.front()<<endl;
+        toke=tokens.front();
+        if(toke[0]=='"' && toke[toke.size()-1]=='"'){
+           toke= toke.substr(1,toke.size()-2);
+        }
+        list.push_back(toke);
+        cout <<toke<<endl;
         tokens.pop();
     }
     return list;

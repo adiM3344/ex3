@@ -13,8 +13,8 @@ int SetVarCommand::execute() {
     Expression* e = i.interpret(this->values[place]);
     this->place = place + 1;
     v->setValue(e->calculate());
-    string message = "set " + v->getSimPath().substr(1,v->getSimPath().length()-2) + " " + this->values[place] + '\r' + '\n';
-    cout<<"the message is: "<<  message<<endl;
+    string message = "set " + v->getSimPath() + " " + this->values[place] + '\r' + '\n';
+    //cout<<"the message is: "<<  message<<endl;
     int is_sent = send(singleton->getClientSocket(), message.c_str(), strlen(message.c_str()), 0);
     if (is_sent == -1) {
         std::cout<<"Error sending message"<<std::endl;

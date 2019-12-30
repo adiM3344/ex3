@@ -190,9 +190,9 @@ void Data::UpdateXMLMap(vector<double> values) {
     Variable* var21 = xml_map.at("/controls/flight/elevator");
     var21->setValue(values[21]);
     xml_map["/controls/flight/elevator"] = var21;
-    Variable* var22 =  xml_map.at("controls/flight/rudder");
+    Variable* var22 =  xml_map.at("/controls/flight/rudder");
     var22->setValue(values[22]);
-    xml_map["controls/flight/rudder"] = var22;
+    xml_map["/controls/flight/rudder"] = var22;
 
     Variable* var23 = xml_map.at("/controls/flight/flaps");
     var23->setValue(values[23]);
@@ -301,8 +301,8 @@ void Data::initXMLMap() {
     xml_map["/controls/flight/aileron"] = var20;
     Variable* var21 =  new Variable("elevator","/controls/flight/elevator",false);
     xml_map["/controls/flight/elevator"] = var21;
-    Variable* var22 =  new Variable("rubber","controls/flight/rudder",false);
-    xml_map["controls/flight/rudder"] = var22;
+    Variable* var22 =  new Variable("rudder","/controls/flight/rudder",false);
+    xml_map["/controls/flight/rudder"] = var22;
 
     Variable* var23 =  new Variable("","/controls/flight/flaps",false);
     xml_map["/controls/flight/flaps"] = var23;

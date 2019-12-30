@@ -9,9 +9,9 @@ int DefineVarCommand::execute() {
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*>* var_map = singleton->getSymbolTable();
     if (sim != "") {
-        singleton->getMTX()->lock();
+        //singleton->getMTX()->lock();
         Variable* var = singleton->getXMLMap()->at(this->sim);
-        singleton->getMTX()->unlock();
+        //singleton->getMTX()->unlock();
         if (this->is_right) {
             var->setDirection(this->is_right);
         }
