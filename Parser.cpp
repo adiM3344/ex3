@@ -38,6 +38,7 @@ void Parser::Parse(){
             Command* c = map->at(command);
             if(c!= nullptr){
                 index = c->execute();
+                cout<<"parser"<<endl;
                 for(int j=0; j<index; j++) {
                     it++;
                 }

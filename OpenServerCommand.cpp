@@ -9,22 +9,30 @@
 #include "OpenServerCommand.h"
 using namespace std;
 //using namespace std::literals::chrono_literals;
-mutex mtx;
 
 void OpenServerCommand::readFromSim(int client_socket) {
-    int valread=0;
+    int valread=0,vector_index=0;
     while(valread!=-1){
-        mtx.lock();
+        Singleton::getInstance()->getMTX()->lock();
         //reading from client
         char buffer[100000] = {0};
         valread = read( client_socket , buffer, 100000);
         std::cout<<buffer<<std::endl;
+        string  value="";
         vector<double> values;
         for(int i=0;i < strlen(buffer); i++) {
-//todo ortal
+            if(buffer[i]==','){
+                double num=atof(value.c_str());
+                values.push_back(num);
+//                values[vector_index]=num;
+                vector_index++;
+                value = "";
+                continue;
+            }
+            value = value+buffer[i];
         }
         Data::UpdateXMLMap(values);
-        mtx.unlock();
+        Singleton::getInstance()->getMTX()->unlock();
     }
 }
 

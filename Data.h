@@ -26,6 +26,7 @@ class Data {
 public:
     map<string, Command*> InitMap(list<string>* l);
     static void UpdateXMLMap(vector<double> values);
+    static void initXMLMap();
 
 };
 

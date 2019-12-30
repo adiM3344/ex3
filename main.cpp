@@ -19,6 +19,7 @@ int main(int argc, char *argv[]) {
     cout<<"~ lexer is done ~"<<endl;
     Data data_map;
     map<string, Command*> map = data_map.InitMap(singleton->getLexerArray());
+    data_map.initXMLMap();
     singleton->setMap(map);
     Parser *parser = new Parser(*singleton->getLexerArray(), *singleton->getMap());
     parser->Parse();

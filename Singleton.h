@@ -10,7 +10,7 @@
 #include <vector>
 #include "Variable.h"
 #include <thread>
-
+#include <mutex>
 using namespace std;
 
 class Singleton {
@@ -21,6 +21,7 @@ class Singleton {
     map<string,Variable*> xml_map;
     vector<thread*> threads;
     int client_socket{};
+    mutex mtx;
     Singleton();
 
 public:
@@ -46,6 +47,9 @@ public:
     }
     list<string>* getLexerArray() {
         return &this->lexer_arr;
+    }
+    mutex* getMTX() {
+        return &this->mtx;
     }
     void setMap(map<string, Command*> map) {
         this->commands_map = map;
