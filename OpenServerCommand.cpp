@@ -17,20 +17,19 @@ void OpenServerCommand::readFromSim(int client_socket) {
         //reading from client
         char buffer[100000] = {0};
         valread = read( client_socket , buffer, 100000);
-        //std::cout<<buffer<<std::endl;
         string  value="";
         vector<double> values;
         for(int i=0;i < strlen(buffer); i++) {
             if(buffer[i]==','){
                 double num=atof(value.c_str());
                 values.push_back(num);
-//                values[vector_index]=num;
                 vector_index++;
                 value = "";
                 continue;
             }
             value = value+buffer[i];
         }
+
         values.push_back(atof(value.c_str()));
         Data::UpdateXMLMap(values);
         Singleton::getInstance()->getMTX()->unlock();
@@ -78,7 +77,7 @@ int OpenServerCommand::execute() {
     }
     cout << "connected" << endl;
 //    close(socketfd); //closing the listening socket
-    thread *t = new thread(OpenServerCommand::readFromSim, client_socket);
+    thread *t = new thread(&OpenServerCommand::readFromSim, client_socket);
     Singleton::getInstance()->addThread(t);
 
 

@@ -22,7 +22,7 @@ class ConnectCommand : public Command {
 public:
     ConnectCommand(string ipAdd, string p) {
         this->port=stoi(p);
-        this->ip = ipAdd;
+        this->ip = ipAdd.substr(1, ipAdd.length() - 2);
     }
     static void readFromClient();
     virtual int execute();

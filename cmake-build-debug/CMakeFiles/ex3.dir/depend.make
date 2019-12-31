@@ -141,8 +141,12 @@ CMakeFiles/ex3.dir/Singleton.cpp.o: ../Variable.h
 CMakeFiles/ex3.dir/Singleton.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Command.h
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Expression.h
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Singleton.h
 CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.cpp
 CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../SleepCommand.h
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../Variable.h
+CMakeFiles/ex3.dir/SleepCommand.cpp.o: ../ex1.h
 
 CMakeFiles/ex3.dir/Variable.cpp.o: ../Expression.h
 CMakeFiles/ex3.dir/Variable.cpp.o: ../Variable.cpp

@@ -1,5 +1,8 @@
 
 #include "WhileCommand.h"
+#include <iostream>
+#include <chrono>
+#include <thread>
 
 int WhileCommand::execute() {
     //check condition and parse if needed
