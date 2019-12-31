@@ -51,7 +51,7 @@ int OpenServerCommand::execute() {
     sockaddr_in address{}; //in means IP4
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY; //give me any IP allocated for my machine
-    address.sin_port = htons(5400);
+    address.sin_port = htons(this->port);
     //we need to convert our number
     // to a number that the network understands.
 

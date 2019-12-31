@@ -20,8 +20,8 @@ int ConnectCommand::execute() {
     //We need to create a sockaddr obj to hold address of server
     sockaddr_in address; //in means IP4
     address.sin_family = AF_INET;//IP4
-    address.sin_addr.s_addr = inet_addr("127.0.0.1");  //the localhost address
-    address.sin_port = htons(5402);
+    address.sin_addr.s_addr = inet_addr(this->ip.c_str());  //the localhost address
+    address.sin_port = htons(this->port);
     //we need to convert our number (both port & localhost)
     // to a number that the network understands.
 
