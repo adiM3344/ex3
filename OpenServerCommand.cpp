@@ -14,6 +14,7 @@ void OpenServerCommand::readFromSim(int client_socket) {
     int valread=0,vector_index=0;
     while(valread!=-1){
         Singleton::getInstance()->getMTX()->lock();
+       //mutex1.lock();
         //reading from client
         char buffer[100000] = {0};
         valread = read( client_socket , buffer, 100000);
@@ -33,6 +34,7 @@ void OpenServerCommand::readFromSim(int client_socket) {
         values.push_back(atof(value.c_str()));
         Data::UpdateXMLMap(values);
         Singleton::getInstance()->getMTX()->unlock();
+//        mutex1.unlock();
     }
 }
 
@@ -79,7 +81,7 @@ int OpenServerCommand::execute() {
 //    close(socketfd); //closing the listening socket
     thread *t = new thread(&OpenServerCommand::readFromSim, client_socket);
     Singleton::getInstance()->addThread(t);
-
+    t->detach();
 
     //writing back to client
     char *hello = "Hello, I can hear you! \n";

@@ -10,16 +10,13 @@ int SetVarCommand::execute() {
     map<string, Variable*>* symbol_table = singleton->getSymbolTable();
     Variable* v = symbol_table->at(this->name);
     Interpreter i;
-    double d = i.interpret(this->values[this->place])->calculate();
+    string val = this->values[this->place];
+    double d = i.interpret(val)->calculate();
     this->place = this->place + 1;
     v->setValue(d);
-    string message = "set " + v->getSimPath() + " " + this->values[this->place] + '\r' + '\n';
-    //cout<<"the message is: "<<  message<<endl;
-    int is_sent = send(singleton->getClientSocket(), message.c_str(), strlen(message.c_str()), 0);
-    if (is_sent == -1) {
-        std::cout<<"Error sending message"<<std::endl;
-    } else {
-        std::cout<<" message sent to server" <<std::endl;
-    }
+    // add to messages for client
+    string message = "set " + v->getSimPath() + " " + to_string(d) + '\r' + '\n';
+//    cout<< "message is: " << message<<endl;
+    singleton->getSimMessages()->push(message);
     return 3;
 }

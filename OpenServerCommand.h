@@ -14,6 +14,7 @@
 #include <string>
 #include "Data.h"
 using namespace std;
+extern  mutex mutex1;
 
 class OpenServerCommand: public Command {
     int port;

@@ -2,15 +2,34 @@
 // Created by ortal on 17/12/2019.
 //
 
-#include <thread>
 #include "ConnectCommand.h"
 #include "OpenServerCommand.h"
+#include <thread>
 
 using namespace std;
+
+void ConnectCommand::sendToSim(int client_socket) {
+    while(Singleton::getInstance()->isConnected()){
+
+        queue<string>* messages = Singleton::getInstance()->getSimMessages();
+        Singleton::getInstance()->getMTX()->lock();
+        while (!messages->empty()){
+            int is_sent = write(client_socket, messages->front().c_str(), strlen(messages->front().c_str()));
+            if (is_sent == -1) {
+                std::cout<<"Error sending message"<<std::endl;
+            } else {
+                messages->pop();
+                std::cout<<" message sent to server" <<std::endl;
+            }
+        }
+        Singleton::getInstance()->getMTX()->unlock();
+    }
+    close(client_socket);
+}
 int ConnectCommand::execute() {
 //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
-    Singleton::getInstance()->setClientSocket(client_socket);
+    //Singleton::getInstance()->setClientSocket(client_socket);
     if (client_socket == -1) {
         //error
         std::cerr << "Could not create a socket"<<std::endl;
@@ -32,7 +51,13 @@ int ConnectCommand::execute() {
         return -2;
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
+        Singleton::getInstance()->setConnectedToClient(true);
     }
+
+    thread *t = new thread(&ConnectCommand::sendToSim, client_socket);
+    Singleton::getInstance()->addThread(t);
+    t->detach();
+
 
 //    //if here we made a connection
 //    char hello[] = "Hi from client";

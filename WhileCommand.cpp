@@ -11,7 +11,6 @@ int WhileCommand::execute() {
         Parser *parser = new Parser(this->command_list, data.InitMap(&this->command_list));
         parser->Parse();
     }
-    cout<<"~ starting while command ~"<<endl;
     if (this->unary_condition) {
         return 4 + this->command_list.size();
     }

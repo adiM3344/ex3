@@ -25,7 +25,7 @@ Print("waiting 2 minutes for gui")
 Sleep(120000)
 Print("let's start")
 warp = 32000
-Sleep(10000)
+Sleep(1000)
 magnetos = 3
 throttle = 0.2
 mixture = 0.949
@@ -39,7 +39,7 @@ autostart = 1
 Print("engine is warming...")
 Print(rpm)
 while rpm <= 750 {
-Print(rpm)
+	Print(rpm)
 }
 Sleep(5000)
 Print("let's fly")
@@ -48,8 +48,11 @@ breaks = 0
 throttle = 1
 while alt < 1000 {
 	rudder = (h0 - heading)/80
+	Print(rudder)
 	aileron = -roll / 70
+	Print(aileron)
 	elevator = pitch / 50
+	Print(elevator)
 	Sleep(250)
 }
 Print("done")

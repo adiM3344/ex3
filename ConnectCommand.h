@@ -24,7 +24,7 @@ public:
         this->port=stoi(p);
         this->ip = ipAdd.substr(1, ipAdd.length() - 2);
     }
-    static void readFromClient();
+    static void sendToSim(int client_socket);
     virtual int execute();
 
 

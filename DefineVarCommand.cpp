@@ -11,9 +11,7 @@ int DefineVarCommand::execute() {
     this->place = this->place+1;
     // if "sim" is not defined
     if (vars_fields[1] != "") {
-        //singleton->getMTX()->lock();
         Variable* var = singleton->getXMLMap()->at(vars_fields[1]);
-        //singleton->getMTX()->unlock();
         if (vars_fields[3] == "->") {
             var->setDirection(true);
         }
@@ -23,8 +21,8 @@ int DefineVarCommand::execute() {
     else {
         Interpreter i;
         double val = i.interpret(vars_fields[2])->calculate();
-        Variable var(vars_fields[0], val);
-        singleton->getSymbolTable()->insert({vars_fields[0], &var});
+        Variable *var = new Variable(vars_fields[0], val);
+        singleton->getSymbolTable()->insert({vars_fields[0], var});
         return 4;
     }
 }

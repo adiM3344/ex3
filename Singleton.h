@@ -11,6 +11,7 @@
 #include "Variable.h"
 #include <thread>
 #include <mutex>
+#include <queue>
 using namespace std;
 
 class Singleton {
@@ -20,8 +21,9 @@ class Singleton {
     map<string, Variable*> symbol_table;
     map<string,Variable*> xml_map;
     vector<thread*> threads;
-    int client_socket{};
+    queue<string> simMessages;
     mutex mtx;
+    bool is_connected=false;
     Singleton();
 
 public:
@@ -29,6 +31,9 @@ public:
 
     map<string, Command*>* getMap() {
         return &this->commands_map;
+    }
+    queue<string>* getSimMessages() {
+        return &this->simMessages;
     }
     map<string, Variable*>* getSymbolTable() {
         return &this->symbol_table;
@@ -39,8 +44,8 @@ public:
     vector<thread*>* getThreads(){
         return &this->threads;
     }
-    int getClientSocket() {
-        return this->client_socket;
+    bool isConnected() {
+        return this->is_connected;
     }
     void setXMLMap(map<string, Variable*>* map) {
         this->xml_map = *map;
@@ -60,8 +65,8 @@ public:
     void addThread(thread* t) {
         this->threads.push_back(t);
     }
-    void setClientSocket(int i) {
-        this->client_socket = i;
+    void setConnectedToClient(bool i) {
+        this->is_connected = i;
     }
 };
 #endif //EX3_SINGELTON_H
