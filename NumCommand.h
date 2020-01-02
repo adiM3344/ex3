@@ -5,15 +5,12 @@
 #include "Command.h"
 
 class NumCommand : public Command{
-    int val;
+    int number_of_commands;
 public:
-    NumCommand(int num) {
-        this->val = num;
+    NumCommand(int val) {
+        this->number_of_commands = val;
     }
-    virtual int execute() {
-        return this->val;
-    }
+    virtual int execute();
 };
-
 
 #endif //EX3_NUMCOMMAND_H

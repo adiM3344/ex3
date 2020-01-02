@@ -1,6 +1,3 @@
-//
-// Created by ortal on 17/12/2019.
-//
 
 #include "ConnectCommand.h"
 #include "OpenServerCommand.h"
@@ -11,18 +8,14 @@ using namespace std;
 void ConnectCommand::sendToSim(int client_socket) {
     while(Singleton::getInstance()->isConnected()){
         queue<string>* messages = Singleton::getInstance()->getSimMessages();
-        //Singleton::getInstance()->getMTX()->lock();
         while (!messages->empty()){
-            //int is_sent = write(client_socket, messages->front().c_str(), strlen(messages->front().c_str()));
             int is_sent = send(client_socket, messages->front().c_str(), strlen(messages->front().c_str()),0);
             if (is_sent == -1) {
                 std::cout<<"Error sending message"<<std::endl;
             } else {
                 messages->pop();
-                std::cout<<" message sent to server" <<std::endl;
             }
         }
-        //Singleton::getInstance()->getMTX()->unlock();
     }
     close(client_socket);
 }

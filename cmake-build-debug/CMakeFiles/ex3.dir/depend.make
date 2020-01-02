@@ -82,9 +82,6 @@ CMakeFiles/ex3.dir/Lexer.cpp.o: ../Singleton.h
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../Variable.h
 CMakeFiles/ex3.dir/Lexer.cpp.o: ../ex1.h
 
-CMakeFiles/ex3.dir/NumCommand.cpp.o: ../Command.h
-CMakeFiles/ex3.dir/NumCommand.cpp.o: ../NumCommand.cpp
-CMakeFiles/ex3.dir/NumCommand.cpp.o: ../NumCommand.h
 
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o: ../Command.h
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o: ../ConditionParser.h

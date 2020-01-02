@@ -28,7 +28,6 @@ class Singleton {
 
 public:
     static Singleton* getInstance();
-
     map<string, Command*>* getMap() {
         return &this->commands_map;
     }
@@ -68,5 +67,7 @@ public:
     void setConnectedToClient(bool i) {
         this->is_connected = i;
     }
+
+    virtual ~Singleton();
 };
 #endif //EX3_SINGELTON_H

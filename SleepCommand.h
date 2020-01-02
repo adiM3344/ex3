@@ -1,9 +1,12 @@
+
 #ifndef EX3_SLEEPCOMMAND_H
 #define EX3_SLEEPCOMMAND_H
 
 #include "Command.h"
 #include "ex1.h"
-#include <iostream>
+#include <chrono>
+#include <thread>
+
 using namespace std;
 
 class SleepCommand : public Command{
@@ -19,4 +22,5 @@ public:
         this->values.push_back(s);
     }
 };
+
 #endif //EX3_SLEEPCOMMAND_H

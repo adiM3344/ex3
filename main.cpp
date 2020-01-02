@@ -1,13 +1,9 @@
-#include <iostream>
-#include <fstream>
-#include "Lexer.h"
+
 #include "Command.h"
-#include "OpenServerCommand.h"
-#include "ConnectCommand.h"
-#include "DefineVarCommand.h"
+#include "Lexer.h"
 #include "Data.h"
 #include "Parser.h"
-#include <map>
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -16,12 +12,13 @@ int main(int argc, char *argv[]) {
     list<string> lexer_list = lex.lexer(s);
     Singleton* singleton = Singleton::getInstance();
     singleton->setLexerArray(&lexer_list);
-    cout<<"~ lexer is done ~"<<endl;
     Data data_map;
     map<string, Command*> map = data_map.InitMap(singleton->getLexerArray());
     data_map.initXMLMap();
     singleton->setMap(map);
     Parser *parser = new Parser(*singleton->getLexerArray(), *singleton->getMap());
     parser->Parse();
+    singleton->setConnectedToClient(false);
+    delete singleton;
     return 0;
 }

@@ -44,6 +44,9 @@ public:
     string getSimPath() {
         return this->sim;
     }
+    bool isRight() {
+        return this->is_right;
+    }
     virtual double calculate(){
         return value;
     }

@@ -4,10 +4,8 @@
 
 #include "Command.h"
 #include "Singleton.h"
-#include <vector>
 
 using namespace std;
-
 
 class SetVarCommand : public Command {
     string name;
@@ -24,6 +22,5 @@ public:
         this->values.push_back(v);
     }
 };
-
 
 #endif //EX3_SETVARCOMMAND_H

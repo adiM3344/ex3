@@ -22,10 +22,8 @@ public:
     OpenServerCommand(string p) {
         this->port= stoi(p);
     }
-    static void readFromSim(int client_socket);
+    static void readFromSim(int client_socket, int socketfd);
     virtual int execute();
-
-
 };
 
 

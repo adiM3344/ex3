@@ -2,12 +2,10 @@
 #ifndef EX3_PRINTCOMMAND_H
 #define EX3_PRINTCOMMAND_H
 
-
 #include "Command.h"
-#include <iostream>
 #include "Singleton.h"
-using namespace std;
 
+using namespace std;
 
 class PrintCommand : public Command{
     vector<string> values;
@@ -22,6 +20,5 @@ public:
         this->values.push_back(s);
     }
 };
-
 
 #endif //EX3_PRINTCOMMAND_H
