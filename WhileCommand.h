@@ -4,22 +4,16 @@
 
 #include "ConditionParser.h"
 #include "Data.h"
-#include <string>
-#include <vector>
-#include <list>
 #include "Parser.h"
 
 using namespace std;
 
-
-
 class WhileCommand : public ConditionParser {
     list<string> command_list;
-    bool unary_condition = false;
+    int lists_size;
 public:
     WhileCommand(const vector<string> &condition, const list<string> &commandList);
     virtual int execute();
 };
-
 
 #endif //EX3_WHILECOMMAND_H

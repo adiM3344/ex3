@@ -3,11 +3,8 @@
 #define PROJECT_EXPRESSION_H
 
 using namespace std;
-/**
- * Expression Interface
- */
-class Expression {
 
+class Expression {
 public:
     virtual double calculate() = 0;
     virtual ~Expression() {}

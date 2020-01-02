@@ -1,6 +1,7 @@
-#include <vector>
+
 #include "Data.h"
 
+//initiate an array of strings to commands
 map<string, Command*> Data::InitMap(list<string>* l) {
     map<string,Command*> commands_map;
     list<string>::iterator it = l->begin();
@@ -122,143 +123,14 @@ map<string, Command*> Data::InitMap(list<string>* l) {
             i+=2;
         }
     }
+    // get the number of commands
     Command* c = new NumCommand(commands_num);
     commands_map.insert({"commands_num", c});
     return commands_map;
 
 }
 
-void Data::UpdateXMLMap(vector<double> values) {
-    Singleton* singleton = Singleton::getInstance();
-//    singleton->getMTX()->lock();
-    map<string, Variable*> xml_map = *singleton->getXMLMap();
-    Variable* var0 =  xml_map.at("/instrumentation/airspeed-indicator/indicated-speed-kt");
-    var0->setValue(values[0]);
-    xml_map["/instrumentation/airspeed-indicator/indicated-speed-kt"] = var0;
-    Variable* var1 = xml_map.at("/sim/time/warp");
-    var1->setValue(values[1]);
-    xml_map["/sim/time/warp"] = var1;
-    Variable* var2 =  xml_map.at("/controls/switches/magnetos");
-    var2->setValue(values[2]);
-    xml_map["/controls/switches/magnetos"] = var2;
-    Variable* var3 =  xml_map.at("/instrumentation/heading-indicator/offset-deg");
-    var3->setValue(values[3]);
-    xml_map["/instrumentation/heading-indicator/offset-deg"] = var3;
-    Variable* var4 =  xml_map.at("/instrumentation/altimeter/indicated-altitude-ft");
-    var4->setValue(values[4]);
-    xml_map["/instrumentation/altimeter/indicated-altitude-ft"] = var4;
-    Variable* var5 =  xml_map.at("/instrumentation/altimeter/pressure-alt-ft");
-    var5->setValue(values[5]);
-    xml_map["/instrumentation/altimeter/pressure-alt-ft"] = var5;
-    Variable* var6 =  xml_map.at("/instrumentation/attitude-indicator/indicated-pitch-deg");
-    var6->setValue(values[6]);
-    xml_map["/instrumentation/attitude-indicator/indicated-pitch-deg"] = var6;
-    Variable* var7 =  xml_map.at("/instrumentation/attitude-indicator/indicated-roll-deg");
-    var7->setValue(values[7]);
-    xml_map["/instrumentation/attitude-indicator/indicated-roll-deg"] = var7;
-    Variable* var8 =  xml_map.at("/instrumentation/attitude-indicator/internal-pitch-deg");
-    var8->setValue(values[8]);
-    xml_map["/instrumentation/attitude-indicator/internal-pitch-deg"] = var8;
-
-    Variable* var9 =  xml_map.at("/instrumentation/attitude-indicator/internal-roll-deg");
-    var9->setValue(values[9]);
-    xml_map["/instrumentation/attitude-indicator/internal-roll-deg"] = var9;
-
-    Variable* var10 =  xml_map.at("/instrumentation/encoder/indicated-altitude-ft");
-    var10->setValue(values[10]);
-    xml_map["/instrumentation/encoder/indicated-altitude-ft"] = var10;
-
-    Variable* var11 =  xml_map.at("/instrumentation/encoder/pressure-alt-ft");
-    var11->setValue(values[11]);
-    xml_map["/instrumentation/encoder/pressure-alt-ft"] = var11;
-
-    Variable* var12 =  xml_map.at("/instrumentation/gps/indicated-altitude-ft");
-    var12->setValue(values[12]);
-    xml_map["/instrumentation/gps/indicated-altitude-ft"] = var12;
-
-    Variable* var13 =  xml_map.at("/instrumentation/gps/indicated-ground-speed-kt");
-    var13->setValue(values[13]);
-    xml_map["/instrumentation/gps/indicated-ground-speed-kt"] = var13;
-
-    Variable* var14 =  xml_map.at("/instrumentation/gps/indicated-vertical-speed");
-    var14->setValue(values[14]);
-    xml_map["/instrumentation/gps/indicated-vertical-speed"] = var14;
-
-    Variable* var15 =  xml_map.at("/instrumentation/heading-indicator/indicated-heading-deg");
-    var15->setValue(values[15]);
-    xml_map["/instrumentation/heading-indicator/indicated-heading-deg"] = var15;
-
-    Variable* var16 = xml_map.at("/instrumentation/magnetic-compass/indicated-heading-deg");
-    var16->setValue(values[16]);
-    xml_map["/instrumentation/magnetic-compass/indicated-heading-deg"] = var16;
-
-    Variable* var17 = xml_map.at("/instrumentation/slip-skid-ball/indicated-slip-skid");
-    var17->setValue(values[17]);
-    xml_map["/instrumentation/slip-skid-ball/indicated-slip-skid"] = var17;
-
-    Variable* var18 = xml_map.at("/instrumentation/turn-indicator/indicated-turn-rate");
-    var18->setValue(values[18]);
-    xml_map["/instrumentation/turn-indicator/indicated-turn-rate"] = var18;
-
-    Variable* var19 = xml_map.at("/instrumentation/vertical-speed-indicator/indicated-speed-fpm");
-    var19->setValue(values[19]);
-    xml_map["/instrumentation/vertical-speed-indicator/indicated-speed-fpm"] = var19;
-
-    Variable* var20 = xml_map.at("/controls/flight/aileron");
-    var20->setValue(values[20]);
-    xml_map["/controls/flight/aileron"] = var20;
-    Variable* var21 = xml_map.at("/controls/flight/elevator");
-    var21->setValue(values[21]);
-    xml_map["/controls/flight/elevator"] = var21;
-    Variable* var22 =  xml_map.at("/controls/flight/rudder");
-    var22->setValue(values[22]);
-    xml_map["/controls/flight/rudder"] = var22;
-
-    Variable* var23 = xml_map.at("/controls/flight/flaps");
-    var23->setValue(values[23]);
-    xml_map["/controls/flight/flaps"] = var23;
-
-    Variable* var24 = xml_map.at("/controls/engines/engine/throttle");
-    var24->setValue(values[24]);
-    xml_map["/controls/engines/engine/throttle"] = var24;
-
-    Variable* var25 = xml_map.at("/controls/engines/current-engine/throttle");
-    var25->setValue(values[25]);
-    xml_map["/controls/engines/current-engine/throttle"] = var25;
-    Variable* var26 = xml_map.at("/controls/switches/master-avionics");
-    var26->setValue(values[26]);
-    xml_map["/controls/switches/master-avionics"] = var26;
-    Variable* var27 = xml_map.at("/controls/switches/starter");
-    var27->setValue(values[27]);
-    xml_map["/controls/switches/starter"] = var27;
-    Variable* var28 = xml_map.at("/engines/active-engine/auto-start");
-    var28->setValue(values[28]);
-    xml_map["/engines/active-engine/auto-start"] = var28;
-    Variable* var29 = xml_map.at("/controls/flight/speedbrake");
-    var29->setValue(values[29]);
-    xml_map["/controls/flight/speedbrake"] = var29;
-    Variable* var30 =  xml_map.at("/sim/model/c172p/brake-parking");
-    var30->setValue(values[30]);
-    xml_map["/sim/model/c172p/brake-parking"] = var30;
-    Variable* var31 = xml_map.at("/controls/engines/engine/primer");
-    var31->setValue(values[31]);
-    xml_map["/controls/engines/engine/primer"] = var31;
-    Variable* var32 = xml_map.at("/controls/engines/current-engine/mixture");
-    var32->setValue(values[32]);
-    xml_map["/controls/engines/current-engine/mixture"] = var32;
-    Variable* var33 =  xml_map.at("/controls/switches/master-bat");
-    var33->setValue(values[33]);
-    xml_map["/controls/switches/master-bat"] = var33;
-    Variable* var34 =  xml_map.at("/controls/switches/master-alt");
-    var34->setValue(values[34]);
-    xml_map["/controls/switches/master-alt"] = var34;
-    Variable* var35 = xml_map.at("/engines/engine/rpm");
-    var35->setValue(values[35]);
-    xml_map["/engines/engine/rpm"] = var35;
-    singleton->setXMLMap(&xml_map);
-//    singleton->getMTX()->unlock();
-}
-
+//initiate the variables map from the simulator path
 void Data::initXMLMap() {
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*> xml_map;
@@ -355,3 +227,43 @@ void Data::initXMLMap() {
     singleton->setXMLMap(&xml_map);
 }
 
+//updates the values of the variables according to the input from the simulator
+void Data::UpdateXMLMap(vector<double> values) {
+    map<string, Variable*>* xml_map = Singleton::getInstance()->getXMLMap();
+    xml_map->at("/instrumentation/airspeed-indicator/indicated-speed-kt")->setValue(values[0]);
+    xml_map->at("/sim/time/warp")->setValue(values[1]);
+    xml_map->at("/controls/switches/magnetos")->setValue(values[2]);
+    xml_map->at("/instrumentation/heading-indicator/offset-deg")->setValue(values[3]);
+    xml_map->at("/instrumentation/altimeter/indicated-altitude-ft")->setValue(values[4]);
+    xml_map->at("/instrumentation/altimeter/pressure-alt-ft")->setValue(values[5]);
+    xml_map->at("/instrumentation/attitude-indicator/indicated-pitch-deg")->setValue(values[6]);
+    xml_map->at("/instrumentation/attitude-indicator/indicated-roll-deg")->setValue(values[7]);
+    xml_map->at("/instrumentation/attitude-indicator/internal-pitch-deg")->setValue(values[8]);
+    xml_map->at("/instrumentation/attitude-indicator/internal-roll-deg")->setValue(values[9]);
+    xml_map->at("/instrumentation/encoder/indicated-altitude-ft")->setValue(values[10]);
+    xml_map->at("/instrumentation/encoder/pressure-alt-ft")->setValue(values[11]);
+    xml_map->at("/instrumentation/gps/indicated-altitude-ft")->setValue(values[12]);
+    xml_map->at("/instrumentation/gps/indicated-ground-speed-kt")->setValue(values[13]);
+    xml_map->at("/instrumentation/gps/indicated-vertical-speed")->setValue(values[14]);
+    xml_map->at("/instrumentation/heading-indicator/indicated-heading-deg")->setValue(values[15]);
+    xml_map->at("/instrumentation/magnetic-compass/indicated-heading-deg")->setValue(values[16]);
+    xml_map->at("/instrumentation/slip-skid-ball/indicated-slip-skid")->setValue(values[17]);
+    xml_map->at("/instrumentation/turn-indicator/indicated-turn-rate")->setValue(values[18]);
+    xml_map->at("/instrumentation/vertical-speed-indicator/indicated-speed-fpm")->setValue(values[19]);
+    xml_map->at("/controls/flight/aileron")->setValue(values[20]);
+    xml_map->at("/controls/flight/elevator")->setValue(values[21]);
+    xml_map->at("/controls/flight/rudder")->setValue(values[22]);
+    xml_map->at("/controls/flight/flaps")->setValue(values[23]);
+    xml_map->at("/controls/engines/engine/throttle")->setValue(values[24]);
+    xml_map->at("/controls/engines/current-engine/throttle")->setValue(values[25]);
+    xml_map->at("/controls/switches/master-avionics")->setValue(values[26]);
+    xml_map->at("/controls/switches/starter")->setValue(values[27]);
+    xml_map->at("/engines/active-engine/auto-start")->setValue(values[28]);
+    xml_map->at("/controls/flight/speedbrake")->setValue(values[29]);
+    xml_map->at("/sim/model/c172p/brake-parking")->setValue(values[30]);
+    xml_map->at("/controls/engines/engine/primer")->setValue(values[31]);
+    xml_map->at("/controls/engines/current-engine/mixture")->setValue(values[32]);
+    xml_map->at("/controls/switches/master-bat")->setValue(values[33]);
+    xml_map->at("/controls/switches/master-alt")->setValue(values[34]);
+    xml_map->at("/engines/engine/rpm")->setValue(values[35]);
+}

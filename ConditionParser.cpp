@@ -1,16 +1,7 @@
-//
-// Created by ortal on 20/12/2019.
-//
 
 #include "ConditionParser.h"
-#include "ex1.h"
 
-using namespace std;
-
-int ConditionParser::execute() {
-
-
-}
+int ConditionParser::execute() {}
 
 bool ConditionParser::checkCondition() {
     Interpreter i = Interpreter();
@@ -32,8 +23,8 @@ bool ConditionParser::checkCondition() {
     right_val = right_con->calculate();
 
     // if condition contains one argument and there is no comparing sign means
-   //check condition for non boolean condition
-     if (this->condition.size()>1) {
+    //check condition for non boolean condition
+    if (this->condition.size()>1) {
         //check if condition is satisfied
         if (sign == "<") {
             return (left_val < right_val);
@@ -54,5 +45,3 @@ bool ConditionParser::checkCondition() {
 }
 
 ConditionParser::ConditionParser(const vector<string> &condition) : condition(condition) {}
-
-

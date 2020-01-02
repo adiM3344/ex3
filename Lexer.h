@@ -1,13 +1,11 @@
-//
-// Created by adi on 12/16/19.
-//
 
 #ifndef EX3_LEXER_H
 #define EX3_LEXER_H
 
+#include "Singleton.h"
 #include <fstream>
 #include <list>
-#include "Singleton.h"
+
 using namespace std;
 
 class Lexer {

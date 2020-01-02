@@ -1,8 +1,5 @@
+
 #include "ex1.h"
-#include "Expression.h"
-
-using namespace std;
-
 
 double Plus::calculate() {
     return left->calculate() + right->calculate();

@@ -1,12 +1,12 @@
+
 #ifndef EX1_EX1_H
 #define EX1_EX1_H
 
 #include "Expression.h"
 #include "Singleton.h"
-#include <string>
+#include "Variable.h"
 #include <stack>
 #include <map>
-#include "Variable.h"
 
 using namespace std;
 

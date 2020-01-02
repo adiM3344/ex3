@@ -98,7 +98,9 @@ list<string> Lexer::lexer(string file_name) {
                 place = i + 1;
             }
             else if (line[i] == ' ') {
-                tokens.push(line.substr(place, i-place));
+                if (i != 0) {
+                    tokens.push(line.substr(place, i-place));
+                }
                 place = i + 1;
             }
         }
