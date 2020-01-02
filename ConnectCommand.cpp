@@ -22,7 +22,6 @@ void ConnectCommand::sendToSim(int client_socket) {
 int ConnectCommand::execute() {
 //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
-    //Singleton::getInstance()->setClientSocket(client_socket);
     if (client_socket == -1) {
         //error
         std::cerr << "Could not create a socket"<<std::endl;
@@ -44,7 +43,6 @@ int ConnectCommand::execute() {
         return -2;
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
-        Singleton::getInstance()->setConnectedToClient(true);
     }
 
     thread *t = new thread(&ConnectCommand::sendToSim, client_socket);

@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     singleton->setMap(map);
     Parser *parser = new Parser(*singleton->getLexerArray(), *singleton->getMap());
     parser->Parse();
-    singleton->setConnectedToClient(false);
+    singleton->setConnected(false);
     delete singleton;
     return 0;
 }

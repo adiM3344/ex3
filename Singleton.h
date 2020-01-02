@@ -64,7 +64,7 @@ public:
     void addThread(thread* t) {
         this->threads.push_back(t);
     }
-    void setConnectedToClient(bool i) {
+    void setConnected(bool i) {
         this->is_connected = i;
     }
 

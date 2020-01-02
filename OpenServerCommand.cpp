@@ -73,6 +73,7 @@ int OpenServerCommand::execute() {
         return -4;
     }
     cout<<"Server is now connected" <<std::endl;
+    Singleton::getInstance()->setConnected(true);
 //    close(socketfd); //closing the listening socket
     thread *t = new thread(&OpenServerCommand::readFromSim, client_socket, socketfd);
     Singleton::getInstance()->addThread(t);
