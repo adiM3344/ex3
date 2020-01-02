@@ -38,6 +38,9 @@ public:
     void setDirection(bool direction) {
         this->is_right = direction;
     }
+    bool isRight() {
+        return this->is_right;
+    }
     string getSimPath() {
         return this->sim;
     }

@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/adi/CLionProjects/ex3/cmake-build-debug"/>
+				<Option working_dir="/home/ortal/CLionProjects/ex3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/adi/CLionProjects/ex3/cmake-build-debug"/>
+				<Option working_dir="/home/ortal/CLionProjects/ex3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3">
-				<Option output="/home/adi/CLionProjects/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/adi/CLionProjects/ex3/cmake-build-debug"/>
+				<Option output="/home/ortal/CLionProjects/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ortal/CLionProjects/ex3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3/fast">
-				<Option output="/home/adi/CLionProjects/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/adi/CLionProjects/ex3/cmake-build-debug"/>
+				<Option output="/home/ortal/CLionProjects/ex3/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ortal/CLionProjects/ex3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,126 +67,126 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/adi/CLionProjects/ex3/cmake-build-debug"/>
+				<Option working_dir="/home/ortal/CLionProjects/ex3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/ex3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/adi/CLionProjects/ex3/Command.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Command.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ConditionParser.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConditionParser.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ConditionParser.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConditionParser.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ConnectCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConnectCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ConnectCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ConnectCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Data.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Data.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Data.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Data.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/DefineVarCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/DefineVarCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/DefineVarCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/DefineVarCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/IfCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/IfCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/IfCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/IfCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Lexer.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Lexer.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Lexer.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Lexer.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/NumCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/NumCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/NumCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/NumCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/OpenServerCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/OpenServerCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/OpenServerCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/OpenServerCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Parser.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Parser.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Parser.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Parser.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/PrintCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/PrintCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/PrintCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/PrintCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/SetVarCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/SetVarCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/SetVarCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/SetVarCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Singleton.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Singleton.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Singleton.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Singleton.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/SleepCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/SleepCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/SleepCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/SleepCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Variable.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Variable.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/Variable.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/Variable.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/WhileCommand.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/WhileCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/WhileCommand.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/WhileCommand.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ex1.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ex1.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/ex1.h">
+		<Unit filename="/home/ortal/CLionProjects/ex3/ex1.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/main.cpp">
+		<Unit filename="/home/ortal/CLionProjects/ex3/main.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/adi/CLionProjects/ex3/CMakeLists.txt">
+		<Unit filename="/home/ortal/CLionProjects/ex3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

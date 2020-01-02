@@ -15,8 +15,9 @@ int SetVarCommand::execute() {
     this->place = this->place + 1;
     v->setValue(d);
     // add to messages for client
-    string message = "set " + v->getSimPath() + " " + to_string(d) + '\r' + '\n';
-//    cout<< "message is: " << message<<endl;
-    singleton->getSimMessages()->push(message);
+    if (v->isRight()) {
+        string message = "set " + v->getSimPath() + " " + to_string(d) + '\r' + '\n';
+        singleton->getSimMessages()->push(message);
+    }
     return 3;
 }

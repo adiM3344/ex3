@@ -23,7 +23,7 @@ class Singleton {
     vector<thread*> threads;
     queue<string> simMessages;
     mutex mtx;
-    bool is_connected=false;
+    bool is_connected = false;
     Singleton();
 
 public:

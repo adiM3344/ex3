@@ -2,10 +2,10 @@
 #include "IfCommand.h"
 
 int IfCommand::execute() {
-    Data data;
-    Parser *parser = new Parser(this->command_list, data.InitMap(&this->command_list));
     //check condition and parse if needed
     if (ConditionParser::checkCondition()) {
+        Data data;
+        Parser *parser = new Parser(this->command_list, data.InitMap(&this->command_list));
         parser->Parse();
     }
     return 3 + this->lists_size;

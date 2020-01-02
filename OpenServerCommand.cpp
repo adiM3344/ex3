@@ -33,6 +33,7 @@ void OpenServerCommand::readFromSim(int client_socket) {
 
         values.push_back(atof(value.c_str()));
         Data::UpdateXMLMap(values);
+
         Singleton::getInstance()->getMTX()->unlock();
 //        mutex1.unlock();
     }
