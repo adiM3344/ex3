@@ -3,9 +3,11 @@
 #define EX3_DEFINEVARCOMMAND_H
 
 #include "Command.h"
-#include <string>
-#include "ex1.h"
 #include "Singleton.h"
+#include "ex1.h"
+#include <string>
+#include <vector>
+
 using namespace std;
 
 class DefineVarCommand : public Command {
@@ -31,15 +33,7 @@ public:
         this->place = 0;
     }
     virtual int execute();
-    void addVar(string n, string s, string v, string d) {
-        vector<string> fields;
-        fields.push_back(n);
-        fields.push_back(s);
-        fields.push_back(v);
-        fields.push_back(d);
-        this->vars.push_back(fields);
-    }
+    void addVar(string n, string s, string v, string d);
 };
-
 
 #endif //EX3_DEFINEVARCOMMAND_H

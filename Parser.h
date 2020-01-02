@@ -4,6 +4,9 @@
 
 #include "Command.h"
 #include "Singleton.h"
+#include <list>
+#include <map>
+#include <string>
 
 using namespace std;
 

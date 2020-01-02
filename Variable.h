@@ -1,6 +1,3 @@
-//
-// Created by adi on 12/26/19.
-//
 
 #ifndef EX3_VARIABLE_H
 #define EX3_VARIABLE_H
@@ -9,7 +6,6 @@
 #include <string>
 
 using namespace std;
-
 
 class Variable : public Expression{
     string name;
@@ -43,9 +39,6 @@ public:
     }
     string getSimPath() {
         return this->sim;
-    }
-    bool isRight() {
-        return this->is_right;
     }
     virtual double calculate(){
         return value;

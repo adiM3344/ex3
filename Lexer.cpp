@@ -123,7 +123,7 @@ list<string> Lexer::lexer(string file_name) {
     int size = tokens.size();
     list<string> list;
     string toke="";
-    // convert from an array to a list
+    // convert from a queue to a list
     for (int i = 0; i < size; i++) {
         toke=tokens.front();
         // remove quotes

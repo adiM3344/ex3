@@ -1,3 +1,4 @@
+
 #include "Singleton.h"
 
 Singleton* Singleton::instance = 0;
@@ -8,7 +9,6 @@ Singleton* Singleton::getInstance()
     {
         instance = new Singleton();
     }
-
     return instance;
 }
 

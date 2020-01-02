@@ -1,6 +1,3 @@
-//
-// Created by adi on 12/26/19.
-//
 
 #include "Variable.h"
 

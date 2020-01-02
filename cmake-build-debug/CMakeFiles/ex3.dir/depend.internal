@@ -11,22 +11,11 @@ CMakeFiles/ex3.dir/ConditionParser.cpp.o
  /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/ConnectCommand.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
- /home/adi/CLionProjects/ex3/ConditionParser.h
  /home/adi/CLionProjects/ex3/ConnectCommand.cpp
  /home/adi/CLionProjects/ex3/ConnectCommand.h
- /home/adi/CLionProjects/ex3/Data.h
- /home/adi/CLionProjects/ex3/DefineVarCommand.h
  /home/adi/CLionProjects/ex3/Expression.h
- /home/adi/CLionProjects/ex3/IfCommand.h
- /home/adi/CLionProjects/ex3/NumCommand.h
- /home/adi/CLionProjects/ex3/OpenServerCommand.h
- /home/adi/CLionProjects/ex3/Parser.h
- /home/adi/CLionProjects/ex3/PrintCommand.h
- /home/adi/CLionProjects/ex3/SetVarCommand.h
  /home/adi/CLionProjects/ex3/Singleton.h
- /home/adi/CLionProjects/ex3/SleepCommand.h
  /home/adi/CLionProjects/ex3/Variable.h
- /home/adi/CLionProjects/ex3/WhileCommand.h
  /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/Data.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
@@ -81,8 +70,10 @@ CMakeFiles/ex3.dir/Lexer.cpp.o
  /home/adi/CLionProjects/ex3/Lexer.h
  /home/adi/CLionProjects/ex3/Singleton.h
  /home/adi/CLionProjects/ex3/Variable.h
- /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/NumCommand.cpp.o
+ /home/adi/CLionProjects/ex3/Command.h
+ /home/adi/CLionProjects/ex3/NumCommand.cpp
+ /home/adi/CLionProjects/ex3/NumCommand.h
 CMakeFiles/ex3.dir/OpenServerCommand.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
  /home/adi/CLionProjects/ex3/ConditionParser.h
@@ -109,7 +100,6 @@ CMakeFiles/ex3.dir/Parser.cpp.o
  /home/adi/CLionProjects/ex3/Parser.h
  /home/adi/CLionProjects/ex3/Singleton.h
  /home/adi/CLionProjects/ex3/Variable.h
- /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/PrintCommand.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
  /home/adi/CLionProjects/ex3/Expression.h
@@ -132,7 +122,6 @@ CMakeFiles/ex3.dir/Singleton.cpp.o
  /home/adi/CLionProjects/ex3/Singleton.cpp
  /home/adi/CLionProjects/ex3/Singleton.h
  /home/adi/CLionProjects/ex3/Variable.h
- /home/adi/CLionProjects/ex3/ex1.h
 CMakeFiles/ex3.dir/SleepCommand.cpp.o
  /home/adi/CLionProjects/ex3/Command.h
  /home/adi/CLionProjects/ex3/Expression.h

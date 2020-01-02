@@ -5,6 +5,9 @@
 #include "ConditionParser.h"
 #include "Data.h"
 #include "Parser.h"
+#include <list>
+#include <vector>
+#include <string>
 
 using namespace std;
 

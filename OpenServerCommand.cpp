@@ -1,23 +1,19 @@
 
-#include <string>
-#include <iostream>
-#include <thread>
 #include "OpenServerCommand.h"
 
-using namespace std;
-
 void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
-    int valread=0,vector_index=0;
-    while (valread != -1 && Singleton::getInstance()->isConnected()) {
+    int valRead = 0, vector_index = 0;
+    while (valRead != -1 && Singleton::getInstance()->isConnected()) {
         Singleton::getInstance()->getMTX()->lock();
         //reading from client
         char buffer[100000] = {0};
-        valread = read( client_socket , buffer, 100000);
-        string  value="";
+        valRead = read(client_socket, buffer, 100000);
+        string  value = "";
         vector<double> values;
-        for(int i=0;i < strlen(buffer); i++) {
+        // separate the values of the buffer
+        for(int i=0; i < strlen(buffer); i++) {
             if(buffer[i]==','){
-                double num=atof(value.c_str());
+                double num = atof(value.c_str());
                 values.push_back(num);
                 vector_index++;
                 value = "";
@@ -25,8 +21,8 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
             }
             value = value+buffer[i];
         }
-
         values.push_back(atof(value.c_str()));
+        // update the values read from socket
         Data::UpdateXMLMap(values);
         Singleton::getInstance()->getMTX()->unlock();
     }
@@ -34,56 +30,44 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
 }
 
 int OpenServerCommand::execute() {
-//create socket
+    int port;
+    Interpreter i;
+    port = (int) i.interpret(this->port_string)->calculate();
+    // create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
+    // if creation failed
     if (socketfd == -1) {
-        //error
         std::cerr << "Could not create a socket"<<std::endl;
         return -1;
     }
-
     //bind socket to IP address
-    // we first need to create the sockaddr obj.
-    sockaddr_in address{}; //in means IP4
+    sockaddr_in address{};
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY; //give me any IP allocated for my machine
-    address.sin_port = htons(this->port);
-    //we need to convert our number
-    // to a number that the network understands.
-
-    //the actual bind command
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(port);
     if (bind(socketfd, (struct sockaddr *) &address, sizeof(address)) == -1) {
-        std::cerr<<"Could not bind the socket to an IP"<<std::endl;
-        return -2;
+        cerr<<"Could not bind the socket to an IP"<<endl;
+        return -1;
     }
-
     //making socket listen to the port
-    if (listen(socketfd, 5) == -1) { //can also set to SOMAXCON (max connections)
-        std::cerr<<"Error during listening command"<<std::endl;
-        return -3;
-    } else{
-        std::cout<<"Server is now listening ..."<<std::endl;
+    if (listen(socketfd, 5) == -1) {
+        cerr<<"Error during listening command"<<endl;
+        return -1;
+    } else {
+        cout<<"Server is now listening ..."<<endl;
     }
-
     // accepting a client
     int client_socket = accept(socketfd, (struct sockaddr *)&address, (socklen_t*)&address);
-
+    // if acceptance failed
     if (client_socket == -1) {
-        std::cerr<<"Error accepting client"<<std::endl;
-        return -4;
+        cerr<<"Error accepting client"<<endl;
+        return -1;
     }
-    cout<<"Server is now connected" <<std::endl;
+    cout<<"Server is now connected" <<endl;
     Singleton::getInstance()->setConnected(true);
-//    close(socketfd); //closing the listening socket
+    // create thread
     thread *t = new thread(&OpenServerCommand::readFromSim, client_socket, socketfd);
     Singleton::getInstance()->addThread(t);
     t->detach();
-
-//    //writing back to client
-//    char *hello = "Hello, I can hear you! \n";
-//    send(client_socket , hello , strlen(hello) , 0 );
-//    std::cout<<"Hello message sent\n"<<std::endl;
     return 2;
 }
-
-

@@ -3,7 +3,10 @@
 #define EX3_PRINTCOMMAND_H
 
 #include "Command.h"
-#include "Singleton.h"
+#include "ex1.h"
+#include "iostream"
+#include <vector>
+#include <string>
 
 using namespace std;
 

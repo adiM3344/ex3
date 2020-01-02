@@ -2,9 +2,9 @@
 #include "SetVarCommand.h"
 
 int SetVarCommand::execute() {
+    // get the variable that needs to set its value
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*>* symbol_table = singleton->getSymbolTable();
-    // get the variable that needs to set its value
     Variable* v = symbol_table->at(this->name);
     // get the string of the value that needs to be assigned
     string val = this->values[this->place];

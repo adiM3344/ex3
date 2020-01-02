@@ -39,6 +39,6 @@ void Parser::Parse(){
 }
 
 Parser::Parser(const list<string> &commandList, const map<string, Command*> &commandMap){
-    this->command_list=commandList;
-    this->command_map=commandMap;
+    this->command_list = commandList;
+    this->command_map = commandMap;
 }

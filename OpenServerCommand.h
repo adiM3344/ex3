@@ -1,30 +1,30 @@
-//
-// Created by ortal on 17/12/2019.
-//
-#include "Command.h"
+
 #ifndef EX3_OPENSERVERCOMMAND_H
 #define EX3_OPENSERVERCOMMAND_H
+
+#include "Command.h"
+#include "Singleton.h"
+#include "ex1.h"
+#include "Data.h"
 #include <sys/socket.h>
-#include <string>
-#include <iostream>
 #include <unistd.h>
 #include <netinet/in.h>
 #include <cstring>
-#include "Singleton.h"
+#include <iostream>
 #include <string>
-#include "Data.h"
+#include <thread>
+#include <vector>
+
 using namespace std;
-extern  mutex mutex1;
 
 class OpenServerCommand: public Command {
-    int port;
+    string port_string;
 public:
     OpenServerCommand(string p) {
-        this->port= stoi(p);
+        this->port_string= p;
     }
     static void readFromSim(int client_socket, int socketfd);
     virtual int execute();
 };
-
 
 #endif //EX3_OPENSERVERCOMMAND_H

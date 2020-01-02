@@ -4,6 +4,11 @@
 
 #include "Command.h"
 #include "Singleton.h"
+#include "Variable.h"
+#include "ex1.h"
+#include <map>
+#include <vector>
+#include <string>
 
 using namespace std;
 

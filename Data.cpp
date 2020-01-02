@@ -144,64 +144,46 @@ void Data::initXMLMap() {
     xml_map["/instrumentation/heading-indicator/offset-deg"] = var3;
     Variable* var4 =  new Variable("alt","/instrumentation/altimeter/indicated-altitude-ft",false);
     xml_map["/instrumentation/altimeter/indicated-altitude-ft"] = var4;
-
     Variable* var5 =  new Variable("","/instrumentation/altimeter/pressure-alt-ft",false);
     xml_map["/instrumentation/altimeter/pressure-alt-ft"] = var5;
-
     Variable* var6 =  new Variable("","/instrumentation/attitude-indicator/indicated-pitch-deg",false);
     xml_map["/instrumentation/attitude-indicator/indicated-pitch-deg"] = var6;
-
     Variable* var7 =  new Variable("roll","/instrumentation/attitude-indicator/indicated-roll-deg",false);
     xml_map["/instrumentation/attitude-indicator/indicated-roll-deg"] = var7;
     Variable* var8 =  new Variable("pitch","/instrumentation/attitude-indicator/internal-pitch-deg",false);
     xml_map["/instrumentation/attitude-indicator/internal-pitch-deg"] = var8;
-
     Variable* var9 =  new Variable("","/instrumentation/attitude-indicator/internal-roll-deg",false);
     xml_map["/instrumentation/attitude-indicator/internal-roll-deg"] = var9;
-
     Variable* var10 =  new Variable("","/instrumentation/encoder/indicated-altitude-ft",false);
     xml_map["/instrumentation/encoder/indicated-altitude-ft"] = var10;
-
     Variable* var11 =  new Variable("","/instrumentation/encoder/pressure-alt-ft",false);
     xml_map["/instrumentation/encoder/pressure-alt-ft"] = var11;
-
     Variable* var12 =  new Variable("","/instrumentation/gps/indicated-altitude-ft",false);
     xml_map["/instrumentation/gps/indicated-altitude-ft"] = var12;
-
     Variable* var13 =  new Variable("","/instrumentation/gps/indicated-ground-speed-kt",false);
     xml_map["/instrumentation/gps/indicated-ground-speed-kt"] = var13;
-
     Variable* var14 =  new Variable("","/instrumentation/gps/indicated-vertical-speed",false);
     xml_map["/instrumentation/gps/indicated-vertical-speed"] = var14;
-
     Variable* var15 =  new Variable("","/instrumentation/heading-indicator/indicated-heading-deg",false);
     xml_map["/instrumentation/heading-indicator/indicated-heading-deg"] = var15;
-
     Variable* var16 =  new Variable("","/instrumentation/magnetic-compass/indicated-heading-deg",false);
     xml_map["/instrumentation/magnetic-compass/indicated-heading-deg"] = var16;
-
     Variable* var17 =  new Variable("","/instrumentation/slip-skid-ball/indicated-slip-skid",false);
     xml_map["/instrumentation/slip-skid-ball/indicated-slip-skid"] = var17;
-
     Variable* var18 =  new Variable("","/instrumentation/turn-indicator/indicated-turn-rate",false);
     xml_map["/instrumentation/turn-indicator/indicated-turn-rate"] = var18;
-
     Variable* var19 =  new Variable("","/instrumentation/vertical-speed-indicator/indicated-speed-fpm",false);
     xml_map["/instrumentation/vertical-speed-indicator/indicated-speed-fpm"] = var19;
-
     Variable* var20 =  new Variable("aileron","/controls/flight/aileron",false);
     xml_map["/controls/flight/aileron"] = var20;
     Variable* var21 =  new Variable("elevator","/controls/flight/elevator",false);
     xml_map["/controls/flight/elevator"] = var21;
     Variable* var22 =  new Variable("rudder","/controls/flight/rudder",false);
     xml_map["/controls/flight/rudder"] = var22;
-
     Variable* var23 =  new Variable("","/controls/flight/flaps",false);
     xml_map["/controls/flight/flaps"] = var23;
-
     Variable* var24 =  new Variable("","/controls/engines/engine/throttle",false);
     xml_map["/controls/engines/engine/throttle"] = var24;
-
     Variable* var25 =  new Variable("throttle","/controls/engines/current-engine/throttle",false);
     xml_map["/controls/engines/current-engine/throttle"] = var25;
     Variable* var26 =  new Variable("masteravionics","/controls/switches/master-avionics",false);

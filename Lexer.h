@@ -4,6 +4,9 @@
 
 #include "Singleton.h"
 #include <fstream>
+#include <queue>
+#include <list>
+#include <string>
 
 using namespace std;
 
