@@ -1,6 +1,8 @@
 # Programing Project - 1st Mile Stone
 # Flight Simulator 2020
 
+An Interpenter coded in C++ for FlightGear's Flight Simulator
+
 # WHAT IS IT ABOUT ?
 
 Our project connects to a flight simulator and sends it commands that make an airplain fly.
