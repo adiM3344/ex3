@@ -12,6 +12,7 @@ At first we intrerprate the text from the simulatir to commands and act accordin
 This communication between both sides yields wonderful flight results so the clients is satisfied.
 
 HOW CAN I USE IT ?
+
 In order to use our program you need to work on a linux operating System in your computer and download the
 Flight Simulator gui. After you run our code you may push the button "fly" and wait for the communication between
 the client and server.
