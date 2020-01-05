@@ -26,9 +26,9 @@ Our project designed on a Linux operating system in C++ language.
 
 # TEAM
 
-NAME: ortal lankri
+NAME: Ortal Lankri
 ID: 209281674
 
-NAME: adi meirman
-ID:123456789
+NAME: Adi Meirman
+ID:208177204
 
