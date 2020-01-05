@@ -1,4 +1,4 @@
-# Programing Project - 1st Mile Stone
+# Programing Project - 1st Milestone
 # Flight Simulator 2020
 
 [Link to project's repository](https://github.com/adiM3344/ex3)
