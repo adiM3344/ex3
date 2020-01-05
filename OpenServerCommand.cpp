@@ -7,25 +7,42 @@
  * @param socketfd the socketfd
  */
 void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
-    int valRead = 0, vector_index = 0;
+    int valRead = 0;
+    vector<double> extras;
     while (valRead != -1 && Singleton::getInstance()->isConnected()) {
         Singleton::getInstance()->getMTX()->lock();
         //reading from client
         char buffer[100000] = {0};
         valRead = read(client_socket, buffer, 100000);
-        string  value = "";
+        string value = "";
         vector<double> values;
+        // check if last iteration gave more values then needed
+        int size = extras.size();
+        for (int i = 0; i < size; i++) {
+            value.push_back(extras[i]);
+        }
+        extras.clear();
+        bool extra = false;
         // separate the values of the buffer
         int length = strlen(buffer);
-        for(int i=0; i < length; i++) {
-            if(buffer[i]==','){
-                double num = atof(value.c_str());
-                values.push_back(num);
-                vector_index++;
+        for (int i = 0; i < length; i++) {
+            if (buffer[i] == '\n') {
+                extra = true;
+                values.push_back(atof(value.c_str()));
                 value = "";
                 continue;
             }
-            value = value+buffer[i];
+            if (buffer[i] == ',') {
+                double num = atof(value.c_str());
+                if (extra) {
+                    extras.push_back(num);
+                } else {
+                    values.push_back(num);
+                }
+                value = "";
+                continue;
+            }
+            value = value + buffer[i];
         }
         values.push_back(atof(value.c_str()));
         // update the values read from socket
@@ -47,7 +64,7 @@ int OpenServerCommand::execute() {
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
     // if creation failed
     if (socketfd == -1) {
-        std::cerr << "Could not create a socket"<<std::endl;
+        std::cerr << "Could not create a socket" << std::endl;
         return -1;
     }
     //bind socket to IP address
@@ -56,24 +73,24 @@ int OpenServerCommand::execute() {
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(port);
     if (bind(socketfd, (struct sockaddr *) &address, sizeof(address)) == -1) {
-        cerr<<"Could not bind the socket to an IP"<<endl;
+        cerr << "Could not bind the socket to an IP" << endl;
         return -1;
     }
     //making socket listen to the port
     if (listen(socketfd, 5) == -1) {
-        cerr<<"Error during listening command"<<endl;
+        cerr << "Error during listening command" << endl;
         return -1;
     } else {
-        cout<<"Server is now listening ..."<<endl;
+        cout << "Server is now listening ..." << endl;
     }
     // accepting a client
-    int client_socket = accept(socketfd, (struct sockaddr *)&address, (socklen_t*)&address);
+    int client_socket = accept(socketfd, (struct sockaddr *) &address, (socklen_t *) &address);
     // if acceptance failed
     if (client_socket == -1) {
-        cerr<<"Error accepting client"<<endl;
+        cerr << "Error accepting client" << endl;
         return -1;
     }
-    cout<<"Server is now connected" <<endl;
+    cout << "Server is now connected" << endl;
     Singleton::getInstance()->setConnected(true);
     // create thread
     thread *t = new thread(&OpenServerCommand::readFromSim, client_socket, socketfd);
