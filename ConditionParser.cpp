@@ -1,8 +1,10 @@
 
 #include "ConditionParser.h"
 
-int ConditionParser::execute() {}
-
+/**
+ * checks if a condition is correct
+ * @return if the condition is true or false
+ */
 bool ConditionParser::checkCondition() {
     Interpreter i;
     double left_val = i.interpret(this->condition[0])->calculate();
@@ -27,6 +29,7 @@ bool ConditionParser::checkCondition() {
     } else if (sign == "!=") {
         return (left_val != right_val);
     }
+    return false;
 }
 
-ConditionParser::ConditionParser(const vector<string> &condition) : condition(condition) {}
+ConditionParser::ConditionParser(const vector<string> &conditions) : condition(conditions) {}

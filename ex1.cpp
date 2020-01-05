@@ -1,18 +1,30 @@
 
 #include "ex1.h"
 
+/**
+ * @return the calculated expression
+ */
 double Plus::calculate() {
     return left->calculate() + right->calculate();
 }
 
+/**
+ * @return the calculated expression
+ */
 double Minus::calculate() {
     return left->calculate() - right->calculate();
 }
 
+/**
+ * @return the calculated expression
+ */
 double Mul::calculate() {
     return left->calculate() * right->calculate();
 }
 
+/**
+ * @return the calculated expression
+ */
 double Div::calculate() {
     double rightResult = right->calculate();
     if (rightResult == 0) {
@@ -21,26 +33,38 @@ double Div::calculate() {
     return left->calculate() / right->calculate();
 }
 
+/**
+ * @return the calculated expression
+ */
 double UPlus::calculate() {
     return expression->calculate();
 }
 
+/**
+ * @return the calculated expression
+ */
 double UMinus::calculate() {
     return -expression->calculate();
 }
 
+/**
+ *
+ * @param infix the string that needs to be interpreted
+ * @return the expression that matches the string
+ */
 Expression* Interpreter::interpret(string infix) {
     stack<char> opr;
     stack<Expression*> expr;
     string temp = "";
-    for (int i =0; i<infix.size(); i++) {
+    int size = infix.size();
+    for (int i =0; i < size; i++) {
         if (infix[i] != ' ') {
             temp += infix[i];
         }
     }
     infix = temp;
     int i = 0;
-    int size = infix.size();
+    size = infix.size();
     while (i < size) {
         //if it's a number or a variable, add to expression stack
         if (infix[i] >= '0' && infix[i] <= '9') {
@@ -61,10 +85,12 @@ Expression* Interpreter::interpret(string infix) {
                 name += infix[i];
                 i++;
             }
+            // look for the var in the variables map
             if (variables.count(name)) {
                 double d = variables.find(name)->second;
                 expr.push(new Variable(name, d));
             }
+            // look for the var in the symbol table
             else {
                 Singleton* s = Singleton::getInstance();
                 if (s->getSymbolTable()->count(name)) {
@@ -139,6 +165,10 @@ Expression* Interpreter::interpret(string infix) {
     return expr.top();
 }
 
+/**
+ * set the variables to the map
+ * @param vars the string with variables and their values
+ */
 void Interpreter::setVariables(string vars) {
     int i = 0;
     int varsSize = vars.size();
@@ -188,6 +218,12 @@ void Interpreter::setVariables(string vars) {
     }
 }
 
+/**
+ * creates an expression that operates two expressions
+ * @param opr the stack of opreators
+ * @param expr the stack of expressions
+ * @return the expression
+ */
 Expression *Interpreter::createOperation(stack<char>& opr, stack<Expression*>& expr) {
     if (expr.size() < 2 || opr.empty()) {
         throw "Error: invalid input";
@@ -214,6 +250,11 @@ Expression *Interpreter::createOperation(stack<char>& opr, stack<Expression*>& e
     throw "Error: invalid input";
 }
 
+/**
+ * return a value that is bigger if the precedence is bigger
+ * @param c the char
+ * @return the value of the precedence
+ */
 int Interpreter::precedence(char c){
     if (c == '*' || c == '/') {
         return 2;

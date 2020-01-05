@@ -1,5 +1,6 @@
 
 #include "Variable.h"
+
 /**
  * plus one the var
  * @return the new sum

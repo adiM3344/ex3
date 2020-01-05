@@ -1,7 +1,8 @@
 
 #include "OpenServerCommand.h"
+
 /**
- * readFromSim - the function reads the data from the simulator and updates the xml map
+ * the function reads the data from the simulator and updates the xml map
  * @param client_socket the socket
  * @param socketfd the socketfd
  */
@@ -15,7 +16,8 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
         string  value = "";
         vector<double> values;
         // separate the values of the buffer
-        for(int i=0; i < strlen(buffer); i++) {
+        int length = strlen(buffer);
+        for(int i=0; i < length; i++) {
             if(buffer[i]==','){
                 double num = atof(value.c_str());
                 values.push_back(num);
@@ -32,8 +34,9 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
     }
     close(socketfd);
 }
+
 /**
- * execute - opens the server communication and runs it on a new thread
+ * opens the server communication and runs it on a new thread
  * @return the number of indexes to move in the commands map
  */
 int OpenServerCommand::execute() {

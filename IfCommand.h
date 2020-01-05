@@ -15,7 +15,7 @@ class IfCommand : public ConditionParser{
     list<string> command_list;
     int lists_size;
 public:
-    IfCommand(const vector<string> &condition, const list<string> &commandList);
+    IfCommand(const vector<string> &conditions, const list<string> &commandList);
     virtual int execute();
 };
 

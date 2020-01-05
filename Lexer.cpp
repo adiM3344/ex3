@@ -1,16 +1,27 @@
 
 #include "Lexer.h"
 
+/**
+ * separates the file to tokens list
+ * @param file_name
+ * @return a list of all tokens from the file separated
+ */
 list<string> Lexer::lexer(string file_name) {
-    ifstream file(file_name, ios::in);
     queue<string> tokens;
+    list<string> list;
+    ifstream file(file_name, ios::in);
+    if (!file.is_open()) {
+        cout<<"Could not open file"<<endl;
+        return list;
+    }
     while (file) {
         string line;
         getline(file, line);
         int place = 0;
-        for (int i = 0; i < line.length(); i++) {
+        int length = line.length();
+        for (int i = 0; i < length; i++) {
             // if it's a loop/condition line (has '{')
-            if (line[line.length()-1] == '{') {
+            if (line[length-1] == '{') {
                 // get the first word - the loop type
                 while (line[i] != ' ') {
                     i++;
@@ -42,7 +53,7 @@ list<string> Lexer::lexer(string file_name) {
                 }
                 place = i + 1;
                 // get the right side of the condition (the rest of the line)
-                i = line.length();
+                i = length;
                 if (line[i - 2] == ' ') {
                     tokens.push(line.substr(place, i - 2 - place));
                 } else {
@@ -98,8 +109,8 @@ list<string> Lexer::lexer(string file_name) {
                     place++;
                 }
                 // get the value that needs to be assigned
-                tokens.push(line.substr(place, line.length() - place));
-                i = line.length();
+                tokens.push(line.substr(place, length - place));
+                i = length;
             }
             // skip tabs
             else if (line[i] == '\t') {
@@ -121,7 +132,6 @@ list<string> Lexer::lexer(string file_name) {
         }
     }
     int size = tokens.size();
-    list<string> list;
     string toke="";
     // convert from a queue to a list
     for (int i = 0; i < size; i++) {

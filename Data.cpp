@@ -1,19 +1,24 @@
 
 #include "Data.h"
 
-//initiate an array of strings to commands
+/**
+ * initiate the list of strings to commands
+ * @param l the list of strings
+ * @return the map of commands
+ */
 map<string, Command*> Data::InitMap(list<string>* l) {
     map<string,Command*> commands_map;
     list<string>::iterator it = l->begin();
-    string arr[l->size()];
+    int size = (int) l->size();
+    string *arr = new string[size];
     int while_count = 0;
     int if_count = 0;
     int commands_num = 0;
-    for (int i = 0; i < l->size(); i++) {
+    for (int i = 0; i < size; i++) {
         arr[i] = *it;
         it++;
     }
-    for(int i=0;i<l->size(); i++){
+    for(int i = 0; i < size; i++){
         if(arr[i]=="openDataServer"){
             OpenServerCommand* c = new OpenServerCommand(arr[i+1]);
             commands_map.insert({arr[i],c});
@@ -126,11 +131,14 @@ map<string, Command*> Data::InitMap(list<string>* l) {
     // get the number of commands
     Command* c = new NumCommand(commands_num);
     commands_map.insert({"commands_num", c});
+    delete[] arr;
     return commands_map;
 
 }
 
-//initiate the variables map from the simulator path
+/**
+ * initiate the variables map according to the simulator path
+ */
 void Data::initXMLMap() {
     Singleton* singleton = Singleton::getInstance();
     map<string, Variable*> xml_map;
@@ -209,7 +217,10 @@ void Data::initXMLMap() {
     singleton->setXMLMap(&xml_map);
 }
 
-//updates the values of the variables according to the input from the simulator
+/**
+ * updates the values of the variables according to the input received from the simulator
+ * @param values the new values
+ */
 void Data::UpdateXMLMap(vector<double> values) {
     map<string, Variable*>* xml_map = Singleton::getInstance()->getXMLMap();
     xml_map->at("/instrumentation/airspeed-indicator/indicated-speed-kt")->setValue(values[0]);

@@ -20,6 +20,10 @@ public:
         this->place = 0;
     }
     virtual int execute();
+    /**
+     * adds a new value for the sleep command
+     * @param s the value
+     */
     void addValue(string s) {
         this->values.push_back(s);
     }

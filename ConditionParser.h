@@ -13,7 +13,6 @@ class ConditionParser: public Command{
     vector<string> condition;
 public:
     ConditionParser(const vector<string> &condition);
-    virtual int execute();
     bool checkCondition();
 };
 

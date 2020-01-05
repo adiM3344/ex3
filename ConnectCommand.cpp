@@ -1,6 +1,10 @@
 
 #include "ConnectCommand.h"
 
+/**
+ * the function sends the new values of variables to the simulator
+ * @param client_socket the socket
+ */
 void ConnectCommand::sendToSim(int client_socket) {
     while(Singleton::getInstance()->isConnected()){
         queue<string>* messages = Singleton::getInstance()->getSimMessages();
@@ -17,6 +21,10 @@ void ConnectCommand::sendToSim(int client_socket) {
     close(client_socket);
 }
 
+/**
+ * connects the client to the program and runs it on a new thread
+ * @return the number of indexes to move in the commands map
+ */
 int ConnectCommand::execute() {
     int port;
     Interpreter i;

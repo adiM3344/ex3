@@ -1,5 +1,6 @@
 
 #include "Parser.h"
+
 /**
  * parsing the commands from the commands map and execute them
  */
@@ -39,6 +40,7 @@ void Parser::Parse(){
         }
     }
 }
+
 /**
  * constructor
  * @param commandList list of commands

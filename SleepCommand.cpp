@@ -1,7 +1,8 @@
 
 #include "SleepCommand.h"
+
 /**
- * make the thread to sleep for minutes given
+ * make the thread to sleep for milliseconds given
  * @return the number of indexes to move in the commands map
  */
 int SleepCommand::execute() {

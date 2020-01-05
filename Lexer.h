@@ -3,6 +3,7 @@
 #define EX3_LEXER_H
 
 #include "Singleton.h"
+#include <iostream>
 #include <fstream>
 #include <queue>
 #include <list>

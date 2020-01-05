@@ -1,7 +1,8 @@
 
 #include "WhileCommand.h"
+
 /**
- * while the condition is correct we parse the commands in it
+ * while the condition is correct it parse the commands in it
  * @return the number of indexes to move in the commands map
  */
 int WhileCommand::execute() {
@@ -13,13 +14,14 @@ int WhileCommand::execute() {
     }
     return 3 + this->lists_size;
 }
+
 /**
  * constructor
  * @param condition to check
  * @param commandList list of commands
  */
-WhileCommand::WhileCommand(const vector<string> &condition, const list<string> &commandList) :
-        ConditionParser(condition) {
+WhileCommand::WhileCommand(const vector<string> &conditions, const list<string> &commandList) :
+        ConditionParser(conditions) {
     this->command_list=commandList;
-    this->lists_size = condition.size() + commandList.size();
+    this->lists_size = conditions.size() + commandList.size();
 }

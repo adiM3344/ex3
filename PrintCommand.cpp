@@ -1,5 +1,6 @@
 
 #include "PrintCommand.h"
+
 /**
  * prints the token accepted to the console
  * @return the number of indexes to move in the commands map

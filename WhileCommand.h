@@ -15,7 +15,7 @@ class WhileCommand : public ConditionParser {
     list<string> command_list;
     int lists_size;
 public:
-    WhileCommand(const vector<string> &condition, const list<string> &commandList);
+    WhileCommand(const vector<string> &conditions, const list<string> &commandList);
     virtual int execute();
 };
 

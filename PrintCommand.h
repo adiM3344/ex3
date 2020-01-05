@@ -19,6 +19,10 @@ public:
         this->place = 0;
     }
     virtual int execute();
+    /**
+     * adds a new value that needs to be printed to the print command
+     * @param s the value
+     */
     void addValue(string s) {
         this->values.push_back(s);
     }
