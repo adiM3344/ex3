@@ -1,6 +1,10 @@
 
 #include "OpenServerCommand.h"
-
+/**
+ * readFromSim - the function reads the data from the simulator and updates the xml map
+ * @param client_socket the socket
+ * @param socketfd the socketfd
+ */
 void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
     int valRead = 0, vector_index = 0;
     while (valRead != -1 && Singleton::getInstance()->isConnected()) {
@@ -28,7 +32,10 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
     }
     close(socketfd);
 }
-
+/**
+ * execute - opens the server communication and runs it on a new thread
+ * @return the number of indexes to move in the commands map
+ */
 int OpenServerCommand::execute() {
     int port;
     Interpreter i;

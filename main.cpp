@@ -11,6 +11,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
+    if (argc == 1) {
+        cout<<"No file-name provided"<<endl;
+        return 0;
+    }
     string file_name = argv[1];
     Lexer lex;
     list<string> lexer_list = lex.lexer(file_name);

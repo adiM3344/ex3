@@ -2,7 +2,10 @@
 #include "Singleton.h"
 
 Singleton* Singleton::instance = 0;
-
+/**
+ * get the member of the class and returns it
+ * @return the member of the class
+ */
 Singleton* Singleton::getInstance()
 {
     if (instance == 0)
@@ -13,7 +16,9 @@ Singleton* Singleton::getInstance()
 }
 
 Singleton::Singleton(){}
-
+/**
+ * destructor to all maps and commands
+ */
 Singleton::~Singleton() {
     map<string, Command*>::iterator it = this->commands_map.begin();
     for(int i = 0; i < this->commands_map.size(); i++) {

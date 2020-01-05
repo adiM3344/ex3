@@ -1,6 +1,10 @@
 
 #include "SetVarCommand.h"
-
+/**
+ * get the variable that needs to set its value and interpret the string ,
+ * finally set the string to the var
+ * @return the number of indexes to move in the commands map
+ */
 int SetVarCommand::execute() {
     // get the variable that needs to set its value
     Singleton* singleton = Singleton::getInstance();

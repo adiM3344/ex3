@@ -31,15 +31,31 @@ public:
     void setValue(double v) {
         this->value = v;
     }
+    /**
+     * set the direction of the var to right or left
+     * @param direction of the var
+     */
     void setDirection(bool direction) {
         this->is_right = direction;
     }
+    /**
+     * returns if the arrow is right
+     * @return if the arrow is right
+     */
     bool isRight() {
         return this->is_right;
     }
+    /**
+     * returns the simulator path
+     * @return the simulator path
+     */
     string getSimPath() {
         return this->sim;
     }
+    /**
+     *
+     * @return the value of the var
+     */
     virtual double calculate(){
         return value;
     }

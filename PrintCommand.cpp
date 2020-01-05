@@ -1,6 +1,9 @@
 
 #include "PrintCommand.h"
-
+/**
+ * prints the token accepted to the console
+ * @return the number of indexes to move in the commands map
+ */
 int PrintCommand::execute() {
     // get the string that needs to be printed
     string print = this->values[this->place];

@@ -1,6 +1,8 @@
 
 #include "Parser.h"
-
+/**
+ * parsing the commands from the commands map and execute them
+ */
 void Parser::Parse(){
     list<string>::iterator it = this->command_list.begin();
     map<string, Command*> *map = &this->command_map;
@@ -37,7 +39,11 @@ void Parser::Parse(){
         }
     }
 }
-
+/**
+ * constructor
+ * @param commandList list of commands
+ * @param commandMap map of commands
+ */
 Parser::Parser(const list<string> &commandList, const map<string, Command*> &commandMap){
     this->command_list = commandList;
     this->command_map = commandMap;
