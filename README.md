@@ -19,7 +19,8 @@ This communication between both sides yields wonderful flight results so the cli
 # HOW CAN I USE IT ?
 
 In order to use our program you need to work on a linux operating System in your computer and download the
-Flight Simulator gui. After you run our code you may push the button "fly" and wait for the communication between
+Flight Simulator gui.Compile the code with the following line :g++ -std=c++14 *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread. And run it with : ./a.out file_name.
+After you run our code you may push the button "fly" in the simulator and wait for the communication between
 the client and server.
 
 # WORKSPACE
