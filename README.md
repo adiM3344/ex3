@@ -31,7 +31,8 @@ Then, in the additional settings section write the following lines:
 
 In addition, create a .txt file with a set of commands for the interpreter. Also create a xml file of the data the simulator will send and put it in the protocol folder of the simulator.
 
-Compile the code with the following line :g++ -std=c++14 *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread. And run it with : ./a.out file_name.
+Compile the code with the following line: "g++ -std=c++14 *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread". 
+Run the code with: "./a.out file_name". (where "file_name" is the name of the .txt file).
 After you run our code you may push the button "fly" in the simulator and wait for the communication between
 the client and server.
 
@@ -45,5 +46,5 @@ NAME: Ortal Lankri
 ID: 209281674
 
 NAME: Adi Meirman
-ID:208177204
+ID: 208177204
 
