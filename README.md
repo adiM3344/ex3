@@ -11,7 +11,7 @@ Our project connects to a flight simulator and sends it commands that make an ai
 
 # HOW DOES IT WORK ?
 
-We simulate communication between server and client as both parties are programmed by us.
+We simulate communication between server and client as both parts are programmed by us.
 We send commands to the server while running another thread that reads the information from the server.
 At first we intrerprate the text from the simulatir to commands and act accordingly to its demands.
 This communication between both sides yields wonderful flight results so the clients is satisfied.
