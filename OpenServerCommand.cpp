@@ -8,7 +8,6 @@
  */
 void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
     int valRead = 0;
-    vector<double> extras;
     while (valRead != -1 && Singleton::getInstance()->isConnected()) {
         Singleton::getInstance()->getMTX()->lock();
         //reading from client
@@ -16,29 +15,12 @@ void OpenServerCommand::readFromSim(int client_socket, int socketfd) {
         valRead = read(client_socket, buffer, 100000);
         string value = "";
         vector<double> values;
-        // check if last iteration gave more values then needed
-        int size = extras.size();
-        for (int i = 0; i < size; i++) {
-            value.push_back(extras[i]);
-        }
-        extras.clear();
-        bool extra = false;
         // separate the values of the buffer
         int length = strlen(buffer);
         for (int i = 0; i < length; i++) {
-            if (buffer[i] == '\n') {
-                extra = true;
-                values.push_back(atof(value.c_str()));
-                value = "";
-                continue;
-            }
             if (buffer[i] == ',') {
                 double num = atof(value.c_str());
-                if (extra) {
-                    extras.push_back(num);
-                } else {
-                    values.push_back(num);
-                }
+                values.push_back(num);
                 value = "";
                 continue;
             }
@@ -64,7 +46,7 @@ int OpenServerCommand::execute() {
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
     // if creation failed
     if (socketfd == -1) {
-        std::cerr << "Could not create a socket" << std::endl;
+        cerr << "Could not create a socket" << endl;
         return -1;
     }
     //bind socket to IP address
